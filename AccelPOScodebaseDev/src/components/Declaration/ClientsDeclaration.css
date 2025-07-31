@@ -1,0 +1,80 @@
+.clientsDeclaration-navbar {
+    align-items: center;
+    height: 80px;
+    box-shadow: 0 4px 6px #0000001a;
+    position: fixed;
+    top: 0px;
+    left: 225px;
+    z-index: 1000;
+    width: 76%;
+    flex-shrink: 0;
+    }
+    
+    
+    /* Fixed Save Button */
+    .fixed-save-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Background color to ensure it stands out */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: end;
+    }
+    
+    .btn-save {
+    background-color: #CA001D;
+    color: #fff;
+    border-radius: 7px;
+    width: 20%;
+    text-align: center;
+    }
+    
+    .clientsDeclaration-detail-container{
+    /* padding-top: 70px; */
+    font-size: 15px;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+   
+    }
+    
+    .clientsDeclarationForm{
+    width: 100%;
+    overflow-x: hidden;
+    height: calc(100vh - 168px);
+    }
+
+    @media screen and (max-width: 768px) {
+        .clientsDeclaration-navbar {
+          align-items: center;
+          box-shadow: 0 4px 6px #0000001a;
+          flex-shrink: 0;
+          height: 80px;
+          left: 7px;
+          position: fixed;
+          top: -11px;
+          width: 96%;
+          z-index: 1000;
+      }
+      
+      .clientsDeclarationForm {
+        width: 99%;
+      }
+      
+      .clientsDeclaration-detail-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        overflow-y: auto;
+        padding-left: 0px;
+        /* padding-top: 94px; */
+      }
+      
+      }
+
+      .ios-safearea .familyForm{
+        height: calc(100vh - 245px);
+      }

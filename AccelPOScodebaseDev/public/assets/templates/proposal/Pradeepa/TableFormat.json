@@ -1,0 +1,74 @@
+{
+"coverages":
+[
+"product.proposedInsured.coverages.base.benefitPeriod.applicationValue",
+"product.proposedInsured.coverages.base.benefitAmount.applicationValue"
+
+],
+"optionalData":[
+    "||al_address_details.mlife.corr.home_number||",
+    "||product.productDetails.premiumPaymentTerm||",
+    "||product.proposedInsured.corr.homeNumber||",
+    "||product.spouseInsured.corr.homeNumber||",
+    "||payment.relative.name.firstName||" ,
+    "||payment.relative.address.phone.contactNo||" 
+],
+"TableCreateJSON" : 
+[
+   "product.proposedInsured.beneficiaries"
+],
+
+"TableJSONKey":
+{
+   
+   "product.proposedInsured.beneficiaries":[ "name","relationship","dob", "adharCardNumber","percentage"]
+   
+},
+
+
+"TableJSONKeyOther":{
+    "product.proposedInsured.familyDetails.familyInformation":["spouseInsured"],
+    "product.proposedInsured.familyDetails.health":["spouseInsured"],
+    "product.proposedInsured.previousPolicy":["spouseInsured"],
+    "product.proposedInsured.previousPolicy.declined":["spouseInsured"]
+},
+
+"InnerTableCreation" : ["details","declined"],
+
+"AllLife_Coverages" : ["product.proposedInsured.coverages","product.spouseInsured.coverages","product.childOne.coverages","product.childTwo.coverages","product.childThree.coverages","product.childFour.coverages","product.childFive.coverages"],
+
+"InterviewUIFormat" : ["Same"],
+
+"InterviewTableCreateJSONMain" : {
+"product.proposedInsured.individualInterview":["text"]
+},
+
+"InterviewTableJSONKey":
+{
+   "product.proposedInsured.individualInterview.HEALTH":["answer","answerDetail"],
+   "product.proposedInsured.individualInterview.GENERAL":["answer","answerDetail"] 
+},
+
+"InterviewTableJSONKeyOther":{
+    "product.proposedInsured.individualInterview":["spouseInsured"],
+    "product.childOne.individualInterview":[],
+    "product.childTwo.individualInterview":[],
+    "product.childThree.individualInterview":[],
+    "product.childFour.individualInterview":[],
+    "product.childFive.individualInterview":[]
+},
+
+"InterviewFormat" : ["product.proposedInsured.individualInterview"],
+
+"Interview" : ["product.proposedInsured.individualInterview"],
+
+"TableInStucturedFormat": [],
+
+"InteviewCategory":["HEALTH","GENERAL"],
+
+"DivShowHide":["product.childOne","product.childTwo","product.childThree","product.childFour","product.childFive"]
+
+
+
+}
+

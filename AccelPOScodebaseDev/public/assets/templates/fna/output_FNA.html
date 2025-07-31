@@ -1,0 +1,225 @@
+<html id="OuputHtmlFNA">
+    <head id="output_template_head" >
+        <!-- <link rel="stylesheet" href="common-CSS/jquery-ui.css">
+        <link href="common-CSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="common-CSS/template-CSS.css" rel="stylesheet" type="text/css" /> -->
+	<style type="text/css">
+	.tbl {
+		width:100%;
+		
+	}
+    .tbl tr td{
+        padding:8px;
+    }
+	.tbl tr td:first-child{
+		width:50%;
+	}
+	.tbl tr td:nth-child(2){
+		width:40%;
+        text-align: right;
+        padding-right: 10px;
+	}
+	.tbl tr td:last-child{
+		width:10%;
+	}
+    body,html{background:#fff;}
+</style>
+
+</head>
+<body  onload="showOutput('true');">
+<!-- <table>
+	<tbody><tr>
+				<td><img height="70px" width="200px" src="Images/pruwayplus_long.png" alt=""></td>
+				<td width="10%"></td>
+				<td><h5>
+						Financial Needs Analysis Report
+					</h5></td>
+			</tr>
+		</tbody>
+		</table> -->
+	<div style="border:1px solid;"> 
+		
+			<div style="border-bottom:1px solid;">
+                <h2 style="text-align:center">eCeyLife Financial Needs Analysis Output</h2>
+			
+				<div style="border-bottom:1px solid;">
+					<h3><u>Life Insurance Planning</u></h3>
+					
+					<table class="tbl" >	
+						<tr style="width:50%" >
+							<td>Amount required for provision for self/family and outstanding liabilities:
+							</td>
+							<td>||LifeInsurancePlanning.amnt_reqd_out_lia||
+							</td>
+							
+						</tr>
+						<tr style="width:40%" >
+							<td>Less: Amount available from savings and assets:
+							</td>
+							<td>||LifeInsurancePlanning.amnt_avail_sav_assets||
+							</td>
+							
+						</tr>
+						<tr style="width:10%" >
+							<td>Less: Exisitng Life Insurance coverage:
+							</td>
+							<td>||LifeInsurancePlanning.life_insu_coverage||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: Mortgage Protection coverage
+							</td>
+							<td>||LifeInsurancePlanning.mort_protection_coverage||
+							</td>
+							
+						</tr>
+						<tr>
+							<td><b>Final estimated amount of coverage required:
+							</b></td>
+							<td>||LifeInsurancePlanning.est_amnt_coverage_req||
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+				
+				
+				<div style="border-bottom:1px solid;">
+					<h3><u>Savings for Children Education</u></h3>
+					
+					<table class="tbl" >	
+						<tr>
+							<td>Amount required for all Children Education when they enter Uni:
+							</td>
+							<td>||SavingsforChildrenEducation.amnt_reqd_child_edu||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Estimated amount required in todays money:
+							</td>
+							<td>||SavingsforChildrenEducation.est_annual_sav_reqd_child||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: Current Education Plans
+							</td>
+							<td>||SavingsforChildrenEducation.curr_ann_cash_sav_child||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: EPF Account 2 Full Education Withdrawal (with accrued interest)
+							</td>
+							<td>||SavingsforChildrenEducation.epf_acc_full_edu_withdraw||
+							</td>
+							
+						</tr>
+						<tr>
+							<td><b>Final estimated annual cash savings required:
+							</b></td>
+							<td>||SavingsforChildrenEducation.final_est_ann_cash_sav_reqd||
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+				
+				<div style="border-bottom:1px solid;">
+					<h3><u>Health Insurance</u></h3>
+					
+					<table class="tbl" >	
+						<tr>
+							<td>Hospital and surgical (e.g. MediShield) required:
+							</td>
+							<td>||HealthInsurance.hospital_surgical_reqd_flag||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Estimated Critical Illness coverage required:
+							</td>
+							<td>||HealthInsurance.est_crit_illness_coverage_reqd||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: Existing Critical Illness coverage:
+							</td>
+							<td>||HealthInsurance.existing_crit_illness_coverage||
+							</td>
+							
+						</tr>
+						<tr>
+							<td><b>Final estimated critical illness coverage required:
+							</b></td>
+							<td>||HealthInsurance.final_est_crit_illness_coverage_reqd||
+							</td>
+							
+						</tr>
+						
+					</table>
+				</div>
+				
+				<div style="border-bottom:1px solid;">
+					<h3><u>Retirement Planning (Annuity)</u></h3>
+					
+					<table class="tbl" >	
+						<tr>
+							<td>Total amount required at retirement with Inflation:
+							</td>
+							<td>||RetirementPlanning.amnt_reqd_retirement||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: EPF Account 2 Full Retirement Withdrawal (with accrued interest)
+							</td>
+							<td>||RetirementPlanning.epf_acc_full_ret_withdrawal||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: Income from annual annuity at retirement
+							</td>
+							<td>||RetirementPlanning.income_from_ann_annuity||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Less: Income from non-annuity sources
+							</td>
+							<td>||RetirementPlanning.income_from_non_annuity_srces||
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Amount Require today to meet above 
+							</td>
+							<td>||RetirementPlanning.amnt_req_today||
+							</td>
+							
+						</tr>
+						<tr>
+							<td><b>Final estimated retirement coverage required:
+							</b></td>
+							<td>||RetirementPlanning.final_est_retire_fund_reqd||
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+                <!-- <p class="p93 ft13"><b>Signature of the Proposed Owner :</b><img src="||Sign_you||" id="Sign_you" alt="Signature" width="120px" ></img> -->
+                <!-- <b>Signature of the Representative :</b><img src="||Sign_Representative||" id="Sign_Representative" alt="Signature" width="120px" ></img> -->
+                </p>
+                
+			</div>
+	</div>
+    <!-- <div id="savebtn" style="width:100%;text-align:center" class='ill_benefit'>
+        <button class="btn btn_active" id="btnSave" onclick="saveFNAoutput('OuputHtmlFNA','_financialneedanalysisoutput.html');" style="margin:20px;">Save</button>
+        <button class="btn btn_disable" id="btnExit"  onclick="exitFNAoutput();" style="margin:20px;">Exit</button> 
+    </div> -->
+</body>
+</html>

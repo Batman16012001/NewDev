@@ -1,0 +1,159 @@
+
+.calculateHeader{
+  background-color: #a93407;
+}
+
+/* .notFoudProd{
+  color: red;
+} */
+
+.overlay {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Semi-transparent black */
+  z-index: 999; /* Ensure it's above all other elements */
+}
+
+.overlay.active input, 
+.overlay.active textarea,
+.overlay.active select {
+pointer-events: none; /* Disable pointer events */
+background-color:#f4f4f4; /* Change background color to indicate readonly */
+}
+
+.overlay.active input[type="radio"] + label {
+pointer-events: auto; /* Re-enable pointer events for radio button labels */
+}
+
+.headerFont {
+color: #ca001d;
+font-weight: 400;
+}
+
+
+.benefit-navbar {
+align-items: center;
+height: 77px;
+box-shadow: 0 4px 6px #0000001a;
+position: fixed;
+top: 0px;
+left: 225px;
+z-index: 1000;
+width: 76%;
+flex-shrink: 0;
+}
+
+
+/* Fixed Save Button */
+.fixed-save-button-benfit {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #fff; /* Background color to ensure it stands out */
+padding: 10px 20px;
+display: flex;
+justify-content: flex-end;
+}
+
+.btn-save-benefit {
+background-color: #CA001D;
+color: #fff;
+border-radius: 7px;
+width: 15%;
+text-align: center;
+margin-left: 19px;
+}
+
+.benefit-container{
+/* padding-top: 65px; */
+/* height: calc(100vh - 55px); */
+font-size: 15px;
+overflow-y: auto; 
+display: flex;
+flex-direction: column;
+padding-left: 50px;
+}
+
+.btn-saveillustration {
+background-color: #ca001d;
+border-radius: 7px;
+color: #fff;
+text-align: center;
+width: 15%;
+}
+
+.benefitform{
+  width: 100%;
+  height: calc(100vh - 153px);
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+.benefit-navbar {
+  align-items: center;
+  box-shadow: 0 4px 6px #0000001a;
+  flex-shrink: 0;
+  height: 81px;
+  left: 6px;
+  position: fixed;
+  top: -15px;
+  width: 97%;
+  z-index: 1000;
+}
+
+.benefit-container{
+/* padding-top: 80px; */
+font-size: 15px;
+overflow-y: auto; 
+display: flex;
+flex-direction: column;
+padding-left: 0px;
+}
+
+.headerFont {
+color: #ca001d;
+font-weight: 400;
+}
+
+.btn-saveillustration {
+background-color: #ca001d;
+border-radius: 7px;
+color: #fff;
+text-align: center;
+width: 55%;
+}
+
+.btn-save-benefit {
+background-color: #CA001D;
+color: #fff;
+border-radius: 7px;
+width: 17%;
+text-align: center;
+margin-left: 19px;
+}
+
+.fixed-save-button-benfit {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #fff; /* Background color to ensure it stands out */
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+}
+
+.mobilewidth{
+  width: 100%;
+}
+
+} 
+
+.ios-safearea .benefitform{
+  height: calc(100vh - 245px);
+}

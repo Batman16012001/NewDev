@@ -1,0 +1,950 @@
+{
+  "type": "object",
+  "properties": {
+    "QuoteId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicationType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "productType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "productName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "productCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "residentialExtra": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paymentFrequency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primaryInsured": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "spouseInsured": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "child1": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "child2": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "child3": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "child4": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "child5": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "benefitPeriod",
+                "benefitAmount",
+                "Premium"
+              ]
+            }
+          ],
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "age": {
+              "type": "integer",
+              "minLength": 1
+            },
+            "gender": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dob": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "TotalPremium": {
+      "type": "object",
+      "properties": {
+        "CoverageLookup": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Premiums": {
+          "type": "object",
+          "properties": {
+            "Monthly": {
+              "type": "object",
+              "properties": {
+                "PaymentFrequency": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PreviousPremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "PaymentFrequency",
+                "PremiumAmount"
+              ]
+            },
+            "Quarterly": {
+              "type": "object",
+              "properties": {
+                "PaymentFrequency": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PreviousPremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "PaymentFrequency",
+                "PremiumAmount"
+              ]
+            },
+            "Half Yearly": {
+              "type": "object",
+              "properties": {
+                "PaymentFrequency": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PreviousPremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "PaymentFrequency",
+                "PremiumAmount"
+              ]
+            },
+            "Annually": {
+              "type": "object",
+              "properties": {
+                "PaymentFrequency": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PreviousPremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "PremiumAmount": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "PaymentFrequency",
+                "PremiumAmount"
+              ]
+            }
+          },
+          "required": [
+            "Monthly",
+            "Quarterly",
+            "Half Yearly",
+            "Annually"
+          ]
+        }
+      },
+      "required": [
+        "CoverageLookup",
+        "Premiums"
+      ]
+    },
+    "illustration": {
+      "type": "object",
+      "properties": {
+        "CoverageLookup": {
+          "type": "string"
+        },
+        "Premiums": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "year_option": {
+                  "type": "string"
+                },
+                "Annual_Premium": {
+                  "type": "string"
+                },
+                "Account_Balance_4": {
+                  "type": "string"
+                },
+                "Account_Balance_8": {
+                  "type": "string"
+                },
+                "Account_Balance_12": {
+                  "type": "string"
+                },
+                "Surrende_Value_4": {
+                  "type": "string"
+                },
+                "Surrende_Value_8": {
+                  "type": "string"
+                },
+                "Surrende_Value_12": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year_option",
+                "Annual_Premium",
+                "Account_Balance_4",
+                "Account_Balance_8",
+                "Account_Balance_12",
+                "Surrende_Value_4",
+                "Surrende_Value_8",
+                "Surrende_Value_12"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "CoverageLookup",
+        "Premiums"
+      ]
+    }
+  },
+  "required": [
+    "QuoteId",
+    "applicationType",
+    "productType",
+    "productName",
+    "productCode",
+    "residentialExtra",
+    "paymentFrequency",
+    "primaryInsured",
+    "TotalPremium"
+  ]
+}

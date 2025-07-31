@@ -1,0 +1,68 @@
+{
+
+
+"TableCreateJSON" : 
+[
+  "primaryInsured.coverages.0.AccountBalance.0.PremiumAmountOption1", 
+  "illustration.Premiums",
+  "TotalPremium.Premiums"
+],
+"excludeHeaders" :
+[
+   "eliminationPeriod"
+],
+
+"DivShowHide":
+[   
+  "spouseInsured",
+  "child1",
+  "child2",
+  "child3",
+  "child4",
+  "child5"
+],
+"replacement" :
+[
+  {
+    "coverageLookup":"CoverageLookup",
+    "benefitPeriod":"BenefitPeriod",
+    "benefitAmount":"BenefitAmount",
+    "Premium":"Premium",
+    "year_option":"Policy year",
+    "Annual_Premium":"Annual Contribution (RS)",
+    "Account_Balance_4" :" Balance Assumed Dividend Rate @ 4% p.a.", 
+    "Account_Balance_8" :" Balance Assumed Dividend Rate @ 4% p.a." ,
+    "Account_Balance_12" : "Balance Assumed Dividend Rate @ 4% p.a.",
+    "Surrende_Value_4":"Surrender Assumed Dividend Rate @ 4% p.a.", 
+    "Surrende_Value_8"  :"Surrender Assumed Dividend Rate @ 4% p.a.",
+    "Surrende_Value_12":"Surrender Assumed Dividend Rate @ 4% p.a.",
+    "Monthly":"Monthly ",
+    "Quarterly":"Quarterly ",
+    "Half Yearly":"Half Yearly ",
+    "Annually":"Annually",
+    "4" :" Illustrated at Accumulation Rate 4%", 
+    "8" :" Illustrated at Accumulation Rate 8%" ,
+    "12" : "Illustrated at Accumulation Rate 12%",
+    "19":"Year",
+    "199":"Accumulation Rates"
+  }
+],
+"AccumulationRates":[
+  {
+    "cra1_single":
+    {      
+      "19":"199",
+      "2017": "9.54%",
+      "2018": "9.70%",
+      "2019": "9.63%",
+      "2020": "9.27%",
+      "2021": "7.97%",
+      "2022": "10.49%"
+    }
+  }
+
+]
+
+
+
+}

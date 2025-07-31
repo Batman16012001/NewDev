@@ -1,0 +1,487 @@
+/* CustomCustomerSummary.css */
+.table th, .table td {
+    text-align: center;
+    padding: 8px;
+  }
+
+.table {
+    margin: 0 auto; /* Center the table horizontally */
+    font-size: 10px;
+  }
+
+.search-bar {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #e30613;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-button {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-button:hover {
+  border-color: #e30613;
+}
+
+.arrow-down {
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.sync-button,
+.fetch-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  background-color: #e30613;
+  transition: background-color 0.3s ease;
+}
+
+.sync-button:hover,
+.fetch-button:hover {
+  background-color: #b40510;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 100;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pagination-btn.active {
+  color: #ca001d;
+  font-weight: bold;
+  background-color: #fff; 
+}
+
+.pagination-container button {
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  color: #000;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+.pagination-container button.left,
+.pagination-container button.right {
+  border: 1px solid #ca001d;
+  border-radius: 5px;
+  color: #ca001d;
+  background-color: #fff;
+  outline: none;
+}
+
+.pagination-btn :active {
+  color: #ca001d;
+  border: none;
+  background-color: #fff;
+}
+
+.pagination-container button:disabled {
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3;
+  cursor: not-allowed;
+  background-color: #f9f9f9;
+}
+
+.static-navbar {
+  background-color: #fff;
+  padding: 0 5px;
+  position: fixed;
+  align-items: center;
+   border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 6px #0000001a;
+  height: 175px;
+    left: 225px;
+  padding: 0 5px;
+  position: fixed;
+  top: 15px;
+  z-index: 1000;
+  width: 76%;
+}
+
+.static-navbar .border-bottom {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* .customersummary-container {
+  padding-top: 50px;
+} */
+
+td {
+  word-break: break-word; /* Break long words and wrap */
+  white-space: normal; /* Allow text to wrap */
+  max-width: 200px; /* Optional: Set a maximum width for the column */
+  overflow-wrap: break-word; /* For compatibility with older browsers */
+}
+
+.filtericon {
+  padding: 7px 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%; 
+  border: none;
+}
+
+.icon-left {
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+}
+
+.filter-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+.icon-right {
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  padding: 0.5rem 10px;
+  left: 17px;
+  min-width: 20rem;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.tabwidth {
+  margin: 0 auto;
+  width: 85%;
+  font-size: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Floating Plus Button Styling */
+.floating-plus-button {
+  position: fixed;
+  bottom: 100px;
+  right: 180px;
+  background-color: #ca001d;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.floating-plus-button:hover {
+  background-color: #ca001d;
+  transform: scale(1.1);
+}
+
+.floating-plus-button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backPointer {
+  font-size: 24px;
+}
+
+.heading{
+  border-bottom: 3px solid #ca001d;
+}
+
+.table thead tr {
+  background-color: #00000029;
+  color: black;
+  /* letter-spacing: .03em; */
+  /* text-transform: uppercase; */
+  /* border-bottom: 1px solid #ca001d; */
+}
+
+.tbody{
+  background-color: #FFFFFF;
+}
+
+.red-text{
+  color:#ca001d ;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.summaryform {
+  width: 93%;
+  /* margin-top: 120px; */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.notification-icon {
+  transition: transform 0.2s ease;
+  /* margin-top: 7px; */
+}
+
+.notification-icon:hover {
+  transform: scale(1.1);
+}
+
+.profile-photo {
+  transition: box-shadow 0.2s ease;
+}
+
+.profile-photo:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.redtext {
+  color: #ca001d;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.customer-icon {
+  font-size: 30px; /* Match the size of the photo */
+  color: #888; /* Gray color for the fallback icon */
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .dashboardcontainer{
+    overflow: hidden;
+  }
+
+  .static-navbar {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px #0000001a;
+    height: 215px;
+    left: 5px;
+    padding: 0 5px;
+    position: fixed;
+    top: -15px;
+    width: 97%;
+    z-index: 1000;
+    }
+
+    .summaryform {
+      /* margin-top: 60px; */
+      width: 100%;
+  }
+
+  .mobiletable {
+    max-height: 500px; /* Adjust table height for mobile */
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+
+  .mobiletable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .mobiletable thead {
+    position: fixed;
+    top: 210px;
+    margin-right: 3%;
+    background-color: #f8f9fa; /* Background color for header */
+    z-index: 2; /* Ensure it stays on top */
+  }
+
+  .mobiletable tbody {
+    overflow-y: scroll;
+  }
+
+  .mobiletable th,
+  .mobiletable td {
+    /* padding: 10px;  */
+    text-align: left;
+  }
+
+  .mobiletable th {
+    font-weight: bold;
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .mobiletable td {
+    font-size: 13px; /* Reduce font size */
+  }
+      
+  .floating-plus-button {
+    bottom: 45px;
+    right: 12px;
+  }
+  .redtext {
+    color: #ca001d;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.iostable{
+  margin-top: 25%;
+}
+  } 
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .static-navbar {
+      align-items: center;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 4px 6px #0000001a;
+      height: 175px;
+      left: 218px;
+      padding: 0 5px;
+      position: fixed;
+      top: 15px;
+      width: 75%;
+      z-index: 1000;
+    }
+
+    /* .summaryform {
+      margin-top: 105px;
+    } */
+  }
+
+
+  .column-selection-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column-options {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.form-check-label {
+    margin-left: 8px;
+}
+
+.btn-primary {
+    align-self: flex-end;
+}
+
+
+/* Add this CSS for proper modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000b3; /* Semi-transparent background */
+  z-index: 1050; /* High z-index to ensure it is on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1060; /* Ensure content is above overlay */
+  position: relative;
+}
+
+.modal .btn {
+  margin-right: 10px;
+}
+
+
+
+.ios-safearea .fixed-bottom {
+  bottom: 45px;
+}
+
+.ios-safearea .floating-plus-button {
+  bottom:85px;
+}
+
+.ios-safearea  .iostable{
+  margin-top: 72px;
+}
+
+.ios-safearea  .mobiletable thead {
+  position: fixed;
+  top: 250px;
+  margin-right: 10px;
+  }
+
+  .ios-safearea .heading, .table thead tr {
+    border-bottom: 2px solid #ca001d;
+    }
+
+    
+    @media screen and (min-width: 412px) {
+      .iostableproposal {
+        margin-top: 15%;
+      }
+    }
