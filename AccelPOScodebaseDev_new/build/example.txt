@@ -1,0 +1,31 @@
+DB Operation on Indexed DB 
+
+-Insert json with primary Key - 
+
+-Update json by primary key and table name - 
+
+-Delete by primary key and table name -
+
+-Select Single record by primary key and table name-
+
+-Select record from multiple tables using primary and forigen key-
+
+-Select multiple record from single table-
+
+-Select record in assending order -
+
+-Select record in desending order-
+
+
+
+-Select record on multiple where condition including OR , AND
+
+-Select record clause - In  
+
+-Select record  clause - LIMIT 20 OFFSET 0 
+
+-Update only mentioned key value not whole JSON
+
+-Select record clause - Like 
+
+-

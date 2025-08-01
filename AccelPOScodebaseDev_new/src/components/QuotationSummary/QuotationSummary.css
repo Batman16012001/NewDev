@@ -1,0 +1,132 @@
+/* CustomCustomerSummary.css */
+.table th, .table td {
+  text-align: center;
+}
+.table {
+  margin: 0 auto; /* Center the table horizontally */
+}
+
+
+/* .quotesummary-container {
+  padding-top: 80px;
+} */
+
+.quotesummaryform{
+  width: 93%;
+  /* margin-top: 90px; */
+}
+
+.quotesummary-navbar {
+  background-color: #fff;
+  padding: 0 5px;
+  position: fixed;
+  align-items: center;
+   border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 6px #0000001a;
+  height: 85px;
+    left: 225px;
+  padding: 0 5px;
+  position: fixed;
+  top: 15px;
+  z-index: 1000;
+  width: 76%;
+}
+
+.quotesummary-navbar .border-bottom {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.red-text{
+  color:#ca001d ;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 100;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pagination-btn.active {
+  color: #ca001d;
+  font-weight: bold;
+  background-color: #fff; 
+}
+
+.pagination-container button {
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  color: #000;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+.pagination-container button.left,
+.pagination-container button.right {
+  border: 1px solid #ca001d;
+  border-radius: 5px;
+  color: #ca001d;
+  background-color: #fff;
+  outline: none;
+}
+
+.pagination-btn :active {
+  color: #ca001d;
+  border: none;
+  background-color: #fff;
+}
+
+.pagination-container button:disabled {
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3;
+  cursor: not-allowed;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+  .quotesummary-navbar {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px #0000001a;
+    height: 81px;
+    left: 8px;
+    padding: 0 5px;
+    position: fixed;
+    top: -15px;
+    width: 96%;
+    z-index: 1000;
+  }
+
+  .quotesummaryform {
+    /* margin-top: -15px; */
+    width: 100%;
+}
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .quotesummary-navbar {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px #0000001a;
+    height:85px;
+    left: 221px;
+    padding: 0 5px;
+    position: fixed;
+    top: 15px;
+    width: 75%;
+    z-index: 1000;
+  }
+
+  /* .quotesummaryform {
+    margin-top: 35px;
+  } */
+}

@@ -1,0 +1,391 @@
+{
+  "type": "object",
+  "properties": {
+    "QuoteId": {
+      "type": "string"
+    },
+    "ClientId": {
+      "type": "string"
+    },
+    "ValidUpto": {
+      "type": "string"
+    },
+    "CreationDate": {
+      "type": "string"
+    },
+    "ExpiryDate": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "applicationType": {
+      "type": "string"
+    },
+    "productType": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productCode": {
+      "type": "string"
+    },
+    "No. of Lives Insured": {
+      "type": "string"
+    },
+    "Retirement age": {
+      "type": "integer"
+    },
+    "primaryInsured": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string"
+                },
+                "AccountBalance": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "PaymentFrequency": {
+                          "type": "string"
+                        },
+                        "Option1": {
+                          "type": "integer"
+                        },
+                        "PremiumAmountOption1": {
+                          "type": "object",
+                          "properties": {
+                            "4": {
+                              "type": "string"
+                            },
+                            "8": {
+                              "type": "string"
+                            },
+                            "12": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "4",
+                            "8",
+                            "12"
+                          ]
+                        },
+                        "Option2": {
+                          "type": "integer"
+                        },
+                        "PremiumAmountOption2": {
+                          "type": "object",
+                          "properties": {
+                            "4": {
+                              "type": "string"
+                            },
+                            "8": {
+                              "type": "string"
+                            },
+                            "12": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "4",
+                            "8",
+                            "12"
+                          ]
+                        },
+                        "Option3": {
+                          "type": "integer"
+                        },
+                        "PremiumAmountOption3": {
+                          "type": "object",
+                          "properties": {
+                            "4": {
+                              "type": "string"
+                            },
+                            "8": {
+                              "type": "string"
+                            },
+                            "12": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "4",
+                            "8",
+                            "12"
+                          ]
+                        },
+                        "Option4": {
+                          "type": "integer"
+                        },
+                        "PremiumAmountOption4": {
+                          "type": "object",
+                          "properties": {
+                            "4": {
+                              "type": "string"
+                            },
+                            "8": {
+                              "type": "string"
+                            },
+                            "12": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "4",
+                            "8",
+                            "12"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "PaymentFrequency",
+                        "Option1",
+                        "PremiumAmountOption1",
+                        "Option2",
+                        "PremiumAmountOption2",
+                        "Option3",
+                        "PremiumAmountOption3",
+                        "Option4",
+                        "PremiumAmountOption4"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "AccountBalance"
+              ]
+            }
+          ]
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "age": {
+              "type": "integer"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "dob": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    },
+    "illustration": {
+      "type": "object",
+      "properties": {
+        "CoverageLookup": {
+          "type": "string"
+        },
+        "Premiums": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "year_option": {
+                  "type": "string"
+                },
+                "Annual_Premium": {
+                  "type": "string"
+                },
+                "Account_Balance_4": {
+                  "type": "string"
+                },
+                "Surrende_Value_4": {
+                  "type": "string"
+                },
+                "Account_Balance_8": {
+                  "type": "string"
+                },
+                "Surrende_Value_8": {
+                  "type": "string"
+                },
+                "Account_Balance_12": {
+                  "type": "string"
+                },
+                "Surrende_Value_12": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year_option",
+                "Annual_Premium",
+                "Account_Balance_4",
+                "Surrende_Value_4",
+                "Account_Balance_8",
+                "Surrende_Value_8",
+                "Account_Balance_12",
+                "Surrende_Value_12"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "year_option": {
+                  "type": "string"
+                },
+                "Annual_Premium": {
+                  "type": "string"
+                },
+                "Account_Balance_4": {
+                  "type": "string"
+                },
+                "Surrende_Value_4": {
+                  "type": "string"
+                },
+                "Account_Balance_8": {
+                  "type": "string"
+                },
+                "Surrende_Value_8": {
+                  "type": "string"
+                },
+                "Account_Balance_12": {
+                  "type": "string"
+                },
+                "Surrende_Value_12": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year_option",
+                "Annual_Premium",
+                "Account_Balance_4",
+                "Surrende_Value_4",
+                "Account_Balance_8",
+                "Surrende_Value_8",
+                "Account_Balance_12",
+                "Surrende_Value_12"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "year_option": {
+                  "type": "string"
+                },
+                "Annual_Premium": {
+                  "type": "string"
+                },
+                "Account_Balance_4": {
+                  "type": "string"
+                },
+                "Surrende_Value_4": {
+                  "type": "string"
+                },
+                "Account_Balance_8": {
+                  "type": "string"
+                },
+                "Surrende_Value_8": {
+                  "type": "string"
+                },
+                "Account_Balance_12": {
+                  "type": "string"
+                },
+                "Surrende_Value_12": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year_option",
+                "Annual_Premium",
+                "Account_Balance_4",
+                "Surrende_Value_4",
+                "Account_Balance_8",
+                "Surrende_Value_8",
+                "Account_Balance_12",
+                "Surrende_Value_12"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "year_option": {
+                  "type": "string"
+                },
+                "Annual_Premium": {
+                  "type": "string"
+                },
+                "Account_Balance_4": {
+                  "type": "string"
+                },
+                "Surrende_Value_4": {
+                  "type": "string"
+                },
+                "Account_Balance_8": {
+                  "type": "string"
+                },
+                "Surrende_Value_8": {
+                  "type": "string"
+                },
+                "Account_Balance_12": {
+                  "type": "string"
+                },
+                "Surrende_Value_12": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year_option",
+                "Annual_Premium",
+                "Account_Balance_4",
+                "Surrende_Value_4",
+                "Account_Balance_8",
+                "Surrende_Value_8",
+                "Account_Balance_12",
+                "Surrende_Value_12"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "CoverageLookup",
+        "Premiums"
+      ]
+    }
+  },
+  "required": [
+    "QuoteId",
+    "ClientId",
+    "ValidUpto",
+    "CreationDate",
+    "ExpiryDate",
+    "Status",
+    "applicationType",
+    "productType",
+    "productName",
+    "productCode",
+    "No. of Lives Insured",
+    "Retirement age",
+    "primaryInsured",
+    "illustration"
+  ]
+}

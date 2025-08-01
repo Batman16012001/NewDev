@@ -1,0 +1,326 @@
+.icon-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #ca001d;
+}
+
+.imagecontainer {
+  width: 150px; /* Set a fixed width for the container */
+  height: 150px; /* Set a fixed height for the container */
+  display: flex; /* Use Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+   /*box-shadow: 0 4px 8px 0px #0404041a; Apply shadow */
+  border-radius: 10px; /* Rounded corners */
+ /* background-color: #fff;  Optional: Add a background color for visibility */
+}
+
+.preview-image {
+  width: 80px; /* Image width */
+  height: 80px; /* Image height */
+  border-radius: 10px; /* Rounded corners for the image */
+  object-fit: contain; /* Ensure the image scales properly */
+}
+
+
+
+.add-more-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 0px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.add-more-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.add-more-button .fa-plus {
+    margin-right: 5px;
+}
+
+ 
+.accordion-content {
+    padding: 15px;
+    background: #fff;
+}
+
+.accordion-title.enabled {
+  background-color:#ca001d; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.accordion-title.disabled {
+  background-color: #00000029;
+  color: black; 
+  cursor: not-allowed;
+  border: none;
+  border-radius: 5px;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  margin-left: 8px;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.docupload-navbar {
+  align-items: center;
+  height: 75px;
+  box-shadow: 0 4px 6px #0000001a;
+  position: fixed;
+  top: 0px;
+  left: 225px;
+  z-index: 1000;
+  width: 76%;
+  flex-shrink: 0;
+}
+
+
+/* Fixed Save Button */
+.fixed-save-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Background color to ensure it stands out */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-save-docupload {
+  background-color: #CA001D;
+  color: #fff;
+  border-radius: 7px;
+  width: 20%;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.docupload-container{
+  /* padding-top: 70px; */
+  font-size: 15px;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.docuploadForm{
+  width: 90%;
+  height: calc(100vh - 168px);
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+.documentform{
+    height: calc(100vh - 430px);
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+.btn-save-documents {
+    background-color: #CA001D;
+    color: #fff;
+    border-radius: 7px;
+    width: 20%;
+    text-align: center;
+  }
+
+
+@media screen and (max-width: 768px) {
+  .docupload-navbar {
+    align-items: center;
+    box-shadow: 0 4px 6px #0000001a;
+    flex-shrink: 0;
+    height: 76px;
+        left: 5px;
+        position: fixed;
+        top: -11px;
+        width: 96%;
+    z-index: 1000;
+}
+
+.docupload-container{
+  /* padding-top: 70px; */
+  font-size: 15px;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+}
+
+.docuploadForm{
+  width: 100%;
+  height: calc(100vh - 160px);
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+.btn-save-documents {
+    background-color: #CA001D;
+    color: #fff;
+    border-radius: 7px;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .btn-save-docupload {
+    background-color: #CA001D;
+    color: #fff;
+    border-radius: 7px;
+    width: 30%;
+    text-align: center;
+  }
+
+  } 
+
+  .document-upload {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .document-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .upload-section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  .image-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .placeholder-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .upload-actions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .icon, .camera-button, .add-more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #f9f9f9;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+   .delete-icon {
+    width: 23px;
+    height:23px;
+    background:none;
+    box-shadow: none;
+  }
+
+
+  .delete-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  .delete-button:hover {
+    background: none;
+  }
+  
+  .icon:hover, .camera-button:hover, .add-more-button:hover{
+    background: #eaeaea;
+  }
+  
+  .uploaded-files-list {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .uploaded-file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: none;
+    /* border-radius: 5px; */
+    margin-bottom: 5px;
+  }
+  
+  .delete-icon {
+    cursor: pointer;
+    color: #d9534f;
+  }
+  
+  .error-message {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+
+  .ios-safearea .docuploadForm {
+    height: calc(100vh - 245px);
+    }

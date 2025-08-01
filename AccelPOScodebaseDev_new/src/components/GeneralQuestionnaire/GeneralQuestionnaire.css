@@ -1,0 +1,169 @@
+/* .dropdown-container {
+    margin-top: 10px;
+}
+
+select {
+    width: 100%; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+} */
+
+.questionnaireHeader{
+    color:#a93407;
+}
+
+.saveQue{
+    background-color: #a93407;
+}
+
+/* .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 97%;
+    background-color: #e3c4c414;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  } */
+
+  .general-navbar {
+    box-shadow: 0 4px 6px #0000001a;
+    flex-shrink: 0;
+    height: 82px;
+    left: 226px;
+    position: fixed;
+    top: 0px;
+    width: 98%;
+    z-index: 1000;
+}
+
+
+.general-container{
+    font-size: 15px;
+    /* padding-top: 70px; */
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .generalform{
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+.fixed-save-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Background color to ensure it stands out */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: end;
+    }
+    
+    .btn-save {
+    background-color: #CA001D;
+    color: #fff;
+    border-radius: 7px;
+    width: 20%;
+    text-align: center;
+    }
+
+    /* .input-container {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+  } */
+  
+  .form-input {
+      /* width: 100%; */
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: .45rem;
+      font-size: 16px;
+  }
+  
+  .autocomplete-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 10;
+      margin-top: 4px;
+  }
+  
+  .autocomplete-item {
+      padding: 8px 12px;
+      cursor: pointer;
+  }
+  
+  .autocomplete-item:hover,
+  .autocomplete-item:focus {
+      background: #f0f0f0;
+  }
+  
+    
+
+  @media screen and (max-width: 768px) {
+    .general-navbar {
+      box-shadow: 0 4px 6px #0000001a;
+      flex-shrink: 0;
+      height: 82px;
+        left: 4px;
+        position: fixed;
+        top: -13px;
+        width: 96%;
+        z-index: 1000;
+  }
+
+  .fixed-save-button {
+    position: fixed;
+    bottom: 0;
+    left: -25px;
+    width: 100%;
+    background-color: #fff; /* Background color to ensure it stands out */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: end;
+    }
+    
+    .btn-save {
+    background-color: #CA001D;
+    color: #fff;
+    border-radius: 7px;
+    width: 40%;
+    text-align: center;
+    }
+
+    .general-container{
+        font-size: 15px;
+        /* padding-top: 70px; */
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        }
+
+        .generalform{
+            height: calc(100vh - 180px);
+    overflow-y: auto;
+    /* margin-left: -20px; */
+    overflow-x: hidden;
+        }
+
+  }
+
+
+  .ios-safearea .generalform{
+    height: calc(100vh - 245px);
+  }
