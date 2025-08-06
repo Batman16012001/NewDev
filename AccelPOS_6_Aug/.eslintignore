@@ -1,0 +1,7 @@
+# Ignore built plugin files
+src/plugins/capacitor-pdf-generator/dist/
+plugins/capacitor-pdf-generator/dist/
+node_modules/
+build/
+dist/
+*.min.js 

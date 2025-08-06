@@ -1,0 +1,344 @@
+/* CustomCustomerSummary.css */
+.table th, .table td {
+    text-align: center;
+  }
+ 
+  .table {
+    margin: 0 auto; /* Center the table horizontally */
+    font-size: 15px;
+  }
+  
+  .search-bar {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+  }
+  
+  .search-bar:focus {
+    border-color: #e30613;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+  }
+  
+  .filter-button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .filter-button:hover {
+    border-color: #e30613;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 100;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .pagination-btn.active {
+    color: #ca001d;
+    font-weight: bold;
+    background-color: #fff; 
+  }
+  
+  .pagination-container button {
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    color: #000;
+    font-size: 13px;
+    background-color: #fff;
+  }
+  
+  .pagination-container button.left,
+  .pagination-container button.right {
+    border: 1px solid #ca001d;
+    border-radius: 5px;
+    color: #ca001d;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  .pagination-btn :active {
+    color: #ca001d;
+    border: none;
+    background-color: #fff;
+  }
+  
+  .pagination-container button:disabled {
+    border: 1px solid #d3d3d3;
+    color: #d3d3d3;
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .proposalsummary-navbar {
+    background-color: #fff;
+    padding: 0 5px;
+    position: fixed;
+    align-items: center;
+     border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px #0000001a;
+    height: 135px;
+      left: 225px;
+    padding: 0 5px;
+    position: fixed;
+    top: 15px;
+    z-index: 1000;
+    width: 76%;
+  }
+  
+  .proposalsummary-navbar .border-bottom {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  /* .proposalsummary-container {
+    padding-top: 80px;
+  } */
+  
+  td {
+    word-break: break-word; /* Break long words and wrap */
+    white-space: normal; /* Allow text to wrap */
+    max-width: 200px; /* Optional: Set a maximum width for the column */
+    overflow-wrap: break-word; /* For compatibility with older browsers */
+  }
+  
+  
+  .filtericon {
+    padding: 7px 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+    border: none;
+  }
+  
+  .icon-left {
+    color: #dc3545;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    flex-grow: 1; 
+  }
+  
+  .icon-right {
+    color: #000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-menu {
+    padding: 0.5rem 10px;
+    left: 17px;
+    min-width: 20rem;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+  }
+  
+  .tabwidth {
+    margin: 0 auto;
+    width: 85%;
+    font-size: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+
+  .backPointer {
+    font-size: 24px;
+  }
+  
+  /* .heading{
+    border-bottom: 1px solid #ca001d;
+  }
+  
+  .table thead tr {
+    background-color: #00000029;
+    color: black;
+    border-bottom: 1px solid #ca001d;
+  } */
+  
+  .tbody{
+    background-color: #FFFFFF;
+  }
+  
+  .red-text{
+    color:#ca001d ;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  
+  .proposalsummary {
+    width: 93%;
+    /* margin-top: 80px; */
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .proposalsummary-navbar {
+      align-items: center;
+      box-shadow: 0 4px 6px #0000001a;
+      flex-shrink: 0;
+      height: 172px;
+      left: 7px;
+      position: fixed;
+      top: -11px;
+      width: 96%;
+      z-index: 1000;
+  }
+  
+  /* .proposalsummary-container {
+    /* display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    overflow-y: auto;
+    padding-left: 0px; */
+    /* padding-top: 35px;
+  } */
+
+      .proposalsummary {
+        /* margin-top: 50px; */
+        width: 100%;
+    }
+
+    .notification-icon {
+      transition: transform 0.2s ease;
+    }
+    
+    .notification-icon:hover {
+      transform: scale(1.1);
+    }
+    
+    .profile-photo {
+      transition: box-shadow 0.2s ease;
+    }
+    
+    .profile-photo:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .mobile-table {
+      max-height: 510px; /* Adjust table height for mobile */
+      overflow-y: auto; /* Enable vertical scroll */
+    }
+  
+    .mobile-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .mobile-table thead {
+      position: sticky;
+      top: -6px;
+      background-color: #f8f9fa; /* Background color for header */
+      z-index: 2; /* Ensure it stays on top */
+    }
+  
+    .mobile-table tbody {
+      overflow-y: scroll;
+    }
+  
+    .mobile-table th,
+    .mobile-table td {
+      padding: 10px; /* Adjust padding for smaller screens */
+      text-align: left;
+    }
+  
+    .mobile-table th {
+      font-weight: bold;
+      font-size: 14px; /* Reduce font size */
+    }
+  
+    .mobile-table td {
+      font-size: 13px; /* Reduce font size */
+    }
+
+    .red-text{
+      color:#ca001d ;
+      font-size: 23px;
+      font-weight: bold;
+    }
+    .iostableproposal{
+      margin-top: 30%;
+      margin-left: -2px;
+    }
+    
+    } 
+
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .proposalsummary-navbar {
+        align-items: center;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 4px 6px #0000001a;
+        height: 135px;
+        left: 221px;
+        padding: 0 5px;
+        position: fixed;
+        top: 15px;
+        width: 75%;
+        z-index: 1000;
+      }
+
+      .iostableproposal {
+        margin-top: 0px;
+      }
+  
+      /* .proposalsummary {
+        margin-top: 105px;
+      } */
+    }
+
+    .ios-safearea  .iostableproposal{
+      margin-top: 91px;
+    }
+
+    @media screen and (min-width: 412px) {
+    .iostableproposal {
+      margin-top: 20%;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .iostableproposal {
+      margin-top: 0px;
+    }
+  }

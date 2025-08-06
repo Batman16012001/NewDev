@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Generator Engine</title>
+    <style>
+        /* Base styles for PDF generation */
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: Arial, sans-serif; 
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .pdf-container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        .hidden {
+            display: none;
+        }
+        @media print {
+            body { margin: 0; }
+            .pdf-container { max-width: none; }
+        }
+    </style>
+    <script src="engine.js"></script>
+</head>
+<body>
+    <div id="pdf-content" class="pdf-container">
+        <!-- Dynamic content will be inserted here -->
+    </div>
+    
+    <script>
+        // Listen for messages from native code
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'GENERATE_PDF') {
+                generatePDF(event.data.inputData, event.data.templateType);
+            }
+        });
+
+        // Listen for messages from parent (native code)
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'PDF_READY') {
+                // Signal that PDF is ready for capture
+                window.parent.postMessage({
+                    type: 'PDF_READY',
+                    success: true
+                }, '*');
+            } else if (event.data.type === 'PDF_ERROR') {
+                // Signal error
+                window.parent.postMessage({
+                    type: 'PDF_ERROR',
+                    error: event.data.error
+                }, '*');
+            }
+        });
+    </script>
+</body>
+</html> 

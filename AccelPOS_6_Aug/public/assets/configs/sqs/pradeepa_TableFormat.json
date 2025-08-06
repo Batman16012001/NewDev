@@ -1,0 +1,25 @@
+{
+
+
+"TableCreateJSON" : 
+[
+ 
+],
+
+"DivShowHide":
+[   
+  "spouseInsured"
+],
+"replacement" :
+[
+  {
+    "coverageLookup":"CoverageLookup",
+    "benefitPeriod":"BenefitPeriod",
+    "benefitAmount":"BenefitAmount",
+    "Premium":"Premium"
+  }
+]
+
+
+
+}

@@ -1,0 +1,124 @@
+.signature-navbar {
+  align-items: center;
+  height: 80px;
+  box-shadow: 0 4px 6px #0000001a;
+  position: fixed;
+  top: 0px;
+  left: 225px;
+  z-index: 1000;
+  width: 76%;
+  flex-shrink: 0;
+  }
+  
+  
+  /* Fixed Save Button */
+  .fixed-save-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Background color to ensure it stands out */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: end;
+  }
+  
+  .btn-save {
+  background-color: #CA001D;
+  color: #fff;
+  border-radius: 7px;
+  width: 10%;
+  text-align: center;
+  }
+  
+  .signature-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    overflow-y: auto;
+    /* padding-top: 30px; */
+    padding-left: 5px;
+    width: 100%;
+    /* height: calc(100vh - 150px); */
+  }
+  
+  .clientsDeclarationForm{
+  width: 100%;
+  }
+
+  .signaturepad{
+    height: 150px;
+    box-shadow: 0 4px 6px #0000001a;
+    border-radius: 10px;
+    border: 1px solid #0000001a;
+    font-weight: normal !important; /* Prevent bold text in signature pad */
+    font-style: normal;
+    text-decoration: none;
+  }
+
+  .sigCanva{
+    width: 480px;
+    height: 200px;
+  }
+
+  .signaturepad img {
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+  }
+  
+
+/* Overlay for blur effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px); /* Blurs the background */
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: 1040; /* Below the sidebar */
+  pointer-events: auto; /* Allow clicks to close sidebar */
+}
+
+  @media screen and (max-width: 768px) {
+      .signature-navbar {
+        align-items: center;
+        box-shadow: 0 4px 6px #0000001a;
+        flex-shrink: 0;
+        height: 80px;
+        left: 7px;
+        position: fixed;
+        top: -11px;
+        width: 96%;
+        z-index: 1000;
+    }
+    
+
+    .signatureForm{
+      width: 95%;
+      height: calc(100vh - 60px);
+      }
+    
+    .signature-container {
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      overflow-y: auto;
+      padding-left: 20px;
+      /* padding-top: 35px; */
+    }
+
+    .mr-auto, .mx-auto {
+      width: 86%;
+      margin-right: auto !important;
+  }
+
+  .sigCanva {
+    height: 230px;
+    width: 300px;
+}
+    
+    }
+
+    

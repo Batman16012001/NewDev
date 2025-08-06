@@ -1,0 +1,50 @@
+{
+"TableCreateJSON" : 
+[
+  "primaryInsured.coverages",  
+  "illustration.Premiums"
+],
+
+"excludeHeaders" :
+[
+   "eliminationPeriod",
+   "coverageLookup"
+],
+
+"hederssequence" :
+[
+  "benefitAmount",
+  "benefitPeriod",    
+  "interestRate",
+  "Premium"
+],
+
+
+"DivShowHide":
+[   
+  "spouseInsured",
+  "child1",
+  "child2",
+  "child3",
+  "child4",
+  "child5"
+],
+
+"replacement" :
+[
+  {
+    "coverageLookup":"CoverageLookup",
+    "benefitPeriod":"Term",
+    "benefitAmount":"Single premium",
+    "Premium":"Guaranteed Maturity Benefit",
+    "interestRate":"Interest Rate",
+    "months" :"No. of Completed Months",
+    "lifeCover":"Life Cover (Rs.)",
+    "surrenderValue":"Surrender Value (Rs.)"
+    
+  }
+]
+
+
+
+}

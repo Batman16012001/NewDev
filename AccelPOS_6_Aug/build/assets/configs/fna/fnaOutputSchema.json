@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "fnaMainId": {
+      "type": "string"
+    },
+    "agentId": {
+      "type": "string"
+    },
+    "clientId": {
+      "type": "string"
+    },
+    "personId": {
+      "type": "string"
+    },
+    "LifeInsurancePlanning": {
+      "type": "object",
+      "properties": {
+        "amnt_reqd_out_lia": {
+          "type": "string"
+        },
+        "amnt_avail_sav_assets": {
+          "type": "string"
+        },
+        "life_insu_coverage": {
+          "type": "string"
+        },
+        "mort_protection_coverage": {
+          "type": "string"
+        },
+        "est_amnt_coverage_req": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amnt_reqd_out_lia",
+        "amnt_avail_sav_assets",
+        "life_insu_coverage",
+        "mort_protection_coverage",
+        "est_amnt_coverage_req"
+      ]
+    },
+    "SavingsforChildrenEducation": {
+      "type": "object",
+      "properties": {
+        "amnt_reqd_child_edu": {
+          "type": "string"
+        },
+        "est_annual_sav_reqd_child": {
+          "type": "string"
+        },
+        "curr_ann_cash_sav_child": {
+          "type": "string"
+        },
+        "epf_acc_full_edu_withdraw": {
+          "type": "string"
+        },
+        "final_est_ann_cash_sav_reqd": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amnt_reqd_child_edu",
+        "est_annual_sav_reqd_child",
+        "curr_ann_cash_sav_child",
+        "epf_acc_full_edu_withdraw",
+        "final_est_ann_cash_sav_reqd"
+      ]
+    },
+    "HealthInsurance": {
+      "type": "object",
+      "properties": {
+        "hospital_surgical_reqd_flag": {
+          "type": "string"
+        },
+        "est_crit_illness_coverage_reqd": {
+          "type": "string"
+        },
+        "existing_crit_illness_coverage": {
+          "type": "string"
+        },
+        "final_est_crit_illness_coverage_reqd": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "hospital_surgical_reqd_flag",
+        "est_crit_illness_coverage_reqd",
+        "existing_crit_illness_coverage",
+        "final_est_crit_illness_coverage_reqd"
+      ]
+    },
+    "RetirementPlanning": {
+      "type": "object",
+      "properties": {
+        "amnt_reqd_retirement": {
+          "type": "string"
+        },
+        "epf_acc_full_ret_withdrawal": {
+          "type": "string"
+        },
+        "income_from_ann_annuity": {
+          "type": "string"
+        },
+        "income_from_non_annuity_srces": {
+          "type": "string"
+        },
+        "amnt_req_today": {
+          "type": "string"
+        },
+        "final_est_retire_fund_reqd": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amnt_reqd_retirement",
+        "epf_acc_full_ret_withdrawal",
+        "income_from_ann_annuity",
+        "income_from_non_annuity_srces",
+        "amnt_req_today",
+        "final_est_retire_fund_reqd"
+      ]
+    }
+  },
+  "required": [
+    "fnaMainId",
+    "agentId",
+    "clientId",
+    "personId",
+    "LifeInsurancePlanning",
+    "SavingsforChildrenEducation",
+    "HealthInsurance",
+    "RetirementPlanning"
+  ]
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_react_app=self.webpackChunkmy_react_app||[]).push([[700],{4700:(e,p,t)=>{e.exports=t.p+"static/media/index.js.LICENSE.7f068cd630b6d1dfde92.txt"}}]);

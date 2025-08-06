@@ -1,0 +1,167 @@
+ 
+.accordion-content {
+  padding: 15px;
+  background: #fff;
+}
+
+.accordion-title.enabled {
+background-color:#ca001d; 
+color: #fff;
+border: none;
+border-radius: 5px;
+outline: none;
+}
+
+.accordion-title.disabled {
+background-color: #00000029;
+color: black; 
+cursor: not-allowed;
+border: none;
+border-radius: 5px;
+}
+
+.accordion-title {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.accordion-icon {
+margin-left: 8px;
+font-size: 18px;
+transition: transform 0.3s ease-in-out;
+}
+
+.disabled {
+cursor: not-allowed;
+opacity: 0.6;
+}
+
+.personal-navbar {
+align-items: center;
+height: 80px;
+box-shadow: 0 4px 6px #0000001a;
+position: fixed;
+top: 0px;
+left: 225px;
+z-index: 1000;
+width: 76%;
+flex-shrink: 0;
+}
+
+
+/* Fixed Save Button */
+.fixednextprevbutton {
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: end;
+  left: -135px;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.btnnext {
+background-color: #CA001D;
+color: #fff;
+border-radius: 7px;
+width: 10%;
+text-align: center;
+}
+
+.btnprev{
+  color: #fff;
+  background-color: #ca001d;
+  border: none;
+  width: 10%;
+  border-radius: 7px;
+  margin-left: 395px;
+}
+
+.btnprev:hover {
+  color: #fff;
+  background-color: #ca001d;
+  border: none;
+}
+
+.personal-detail-container{
+/* padding-top: 70px; */
+font-size: 15px;
+overflow-y: auto; 
+display: flex;
+flex-direction: column;
+padding-left: 0px;
+}
+
+.personalForm{
+width: 100%;
+height: calc(100vh - 168px);
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+.eappform{
+/* height: calc(100vh - 110px); */
+overflow-y: auto; 
+overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .personal-navbar {
+    align-items: center;
+    box-shadow: 0 4px 6px #0000001a;
+    flex-shrink: 0;
+    height: 80px;
+    left: 7px;
+    position: fixed;
+    top: -11px;
+    width: 96%;
+    z-index: 1000;
+}
+
+.personalForm {
+  height: calc(100vh - 170px);
+  width: 99%;
+}
+
+.personal-detail-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  overflow-y: auto;
+  padding-left: 0px;
+  /* padding-top: 94px; */
+}
+
+.btnprev {
+  border: none;
+  border-radius: 7px;
+  margin-left: -20px;
+}
+
+.fixednextprevbutton {
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: end;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.btnnext, .btnprev {
+  background-color: #ca001d;
+  color: #fff;
+  width: 25%;
+}
+}
+
+.ios-safearea .personalForm{
+  height: calc(100vh - 245px);
+}

@@ -1,0 +1,65 @@
+{
+  "common": [
+    "This is only a quotation. The company will determine the final premium and the benefits of the receipt of the proposal and medical Reports / Questionnaires. The   policies issued will indicate the final premium, benefits and conditions applicable.",
+    "Payments may be made through a Bank Standing Order, Credit Card Standing Order or directly to any Ceylinco Life Branch, Cargills Food City, Post Office or to our Banking partners or any of the digital platforms such as Ceylinco Life Website, mCash, eZ Cash, FriMi and Genie.",
+    "Please check the SMS receipt you will receive to your given phone number after you make any payment.",
+    "This quotation is valid only for 30 days from the date hereof or up to next age nearer birthday whichever occurs first.",
+    "Any alterations made on this Quotation / Illustration will not be valid."
+  ],
+
+  "common_another": [
+    "The bonus assumed above are only for illustration and do not represent the upper and lower limits of what you might receive."
+  ],
+
+  "advance_payment": [
+    "notes124"
+  ],
+
+  "endowment": [
+    "endowment"
+  ],
+
+  "smart_saver": [
+    "Guaranteed Maturity Benefit = Sum Assured + Total Premium Paid (Excluding extra premium)",
+    "Death Benefit increases by 2.5% on simple basis upon completion of each policy year"
+  ],
+
+  "Saubhagya": [
+    "supremeNote21"
+  ],
+
+  "HORR":[
+    "Pre-defined sub limits will be applicable pertaining to all benefit categories in the event of a claim in a private or paying ward in a government hospital.",
+    "The cover for overseas treatment (Singapore, Malaysia, India, Thailand, Sri Lanka) shall only be available for the sum assured starting from 1 million to 10 million.",
+    "The worldwide coverage (Excluding US, Canada) will be available for sum assured starting from 15 million up to 50 million"
+  ],
+  "pradeepa":
+  [
+    "This is only a quotation. The policy issued will indicate the benefits and conditions applicable.",
+    " This quotation is valid only for 30 days from the date hereof or up to next age nearer birthday whichever occurs first.",
+    "No Maturity amount applicable for the pradeepa policy.",              
+    "Basic Sum Assured will be paid at death. ",
+    "Please check the SMS receipt you will receive to your given phone number after you make any payment." 
+  ],
+  "investment":
+  [
+    "Life Cover is payable in the event of death during the term of the policy.",
+    "Surrender Value is the amount which the policyholder will receive if he/she terminates the policy before the policy maturity date.",
+    "The surrender value will be based on the number of months completed at the time of surrender.",
+    "This quotation is valid only for 30 days from the date hereof or up to next age nearer birthday whichever occurs first.",
+    "This is only a quotation. The policy issued will indicate the benefits and conditions applicable."
+  ],
+  "cra":
+  [
+    "Payments may be made through a Bank Standing Order, Credit Card Standing Order or directly to any Ceylinco Life Branch, Cargills Food City, Post Office or to our Banking partners or any of the digital platforms such as Ceylinco Life Website, mCash, eZ Cash, FriMi and Genie.",
+    "Please check the SMS receipt you will receive to your given phone number after you make any payment.",
+    "This quotation is valid only for 30 days from the date hereof or up to next age nearer birthday whichever occurs first.",
+    "Any alterations made on this Quotation / Illustration will not be valid.",
+    "This is only a quotation; the Account balance illustrated above is not guaranteed and is subject to fluctuation of interest rate prevailing in the market",
+    "The account balance above has been illustrated assuming an accumulation rate of 4%, 8% and 12% per annum respectively. The accumulation rate will be declared at the beginning of each calendar month and the Individual Fund balance shall be updated monthly.",
+    "The Illustrated Maturity Benefits shown above are intended to provide an indication of likely maturity benefit. The actual Maturity Benefit paid by the company will depend on the actual accumulation rates declared and the dates of payment of premium.",
+    "In the event of cancellation of the policy before the retirement age, Cash Value (Surrender Value) will be paid. Cash Value will be a percentage of Account balance available as at the date of cancellation.",
+    "(Policy year = one-year period commencing from commencement date or policy anniversary which all due premium have been paid for)"
+  ]
+
+}

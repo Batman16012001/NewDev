@@ -1,0 +1,141 @@
+{
+  
+  "type": "object",
+  "properties": {
+    "QuoteId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "applicationType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "productType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "productName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "productCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "residentialExtra": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paymentFrequency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contributionFund": {
+      "type": "integer",
+      "minLength": 1
+    },
+    "primaryInsured": {
+      "type": "object",
+      "properties": {
+        "coverages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "coverageLookup": {
+                  "type": "string"
+                },
+                "benefitPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "eliminationPeriod": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "benefitAmount": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                },
+                "Premium": {
+                  "type": "object",
+                  "properties": {
+                    "applicationValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "applicationValue"
+                  ]
+                }
+              },
+              "required": [
+                "coverageLookup",
+                "Premium"
+              ]
+            }
+          ]
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "age": {
+              "type": "integer"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "dob": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "age",
+            "gender",
+            "dob"
+          ]
+        }
+      },
+      "required": [
+        "coverages",
+        "person"
+      ]
+    }
+  },
+  "required": [
+    "QuoteId",
+    "applicationType",
+    "productType",
+    "productName",
+    "productCode",
+    "residentialExtra",
+    "paymentFrequency",
+    "primaryInsured"
+  ]
+}

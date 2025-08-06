@@ -1,0 +1,2910 @@
+{
+  "type": "object",
+  "properties": {
+    "caseId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "product": {
+      "type": "object",
+      "properties": {
+        "planName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applicationType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "productType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "productCode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposedInsured": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "preferredLanguage": {
+                  "type": "string",
+                  "enum": [
+                    "English",
+                    "Sinhala",
+                    "Tamil"
+                  ]
+                },
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "insurancePolicy": {
+                  "type": "string",
+                  "enum": [
+                    "Printed",
+                    "ePolicy"
+                  ]
+                },
+                "educationalQualification": {
+                  "type": "string",
+                  "enum": [
+                    "Graduate/Professional",
+                    "A/L Completed",
+                    "O/L Completed",
+                    "O/L Not Completed"
+                  ]
+                },
+                "maritalStatus": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "nationality": {
+                  "type": "string",
+                  "enum": [
+                    "SL",
+                    "A",
+                    "ADN",
+                    "AFG",
+                    "ALB",
+                    "AND",
+                    "AUS",
+                    "B",
+                    "BD",
+                    "BDS",
+                    "BG",
+                    "BH",
+                    "BOL",
+                    "BR",
+                    "BRN",
+                    "BS",
+                    "BUR",
+                    "BY",
+                    "C",
+                    "CDN",
+                    "CH",
+                    "CHI",
+                    "CI",
+                    "CO",
+                    "CR",
+                    "CY",
+                    "CZ",
+                    "D",
+                    "DK",
+                    "DOM",
+                    "DY",
+                    "DZ",
+                    "EAK",
+                    "EAT",
+                    "EAU",
+                    "EC",
+                    "ES",
+                    "ESP",
+                    "ET",
+                    "ETH",
+                    "EW",
+                    "F",
+                    "FIN",
+                    "FJI",
+                    "FL",
+                    "FR",
+                    "GB",
+                    "GBA",
+                    "GBG",
+                    "GBJ",
+                    "GBM",
+                    "GBZ",
+                    "GCA",
+                    "GH",
+                    "GR",
+                    "GUY",
+                    "H",
+                    "HK",
+                    "HKG",
+                    "HR",
+                    "I",
+                    "IL",
+                    "IND",
+                    "IR",
+                    "IRL",
+                    "IRQ",
+                    "IS",
+                    "J",
+                    "JA",
+                    "JOR",
+                    "K",
+                    "KWT",
+                    "L",
+                    "LAO",
+                    "LAR",
+                    "LS",
+                    "LT",
+                    "LV",
+                    "M",
+                    "MA",
+                    "MAL",
+                    "MC",
+                    "MEX",
+                    "MK",
+                    "MS",
+                    "MW",
+                    "N",
+                    "NA",
+                    "NIC",
+                    "NL",
+                    "NZ",
+                    "P",
+                    "PA",
+                    "PE",
+                    "PK",
+                    "PL",
+                    "PY",
+                    "RA",
+                    "RB",
+                    "RCA",
+                    "RCB",
+                    "RCH",
+                    "RH",
+                    "RI",
+                    "RIM",
+                    "RL",
+                    "RM",
+                    "RMM",
+                    "RN",
+                    "RO",
+                    "ROK",
+                    "ROU",
+                    "RP",
+                    "RSM",
+                    "RUS",
+                    "RWA",
+                    "SD",
+                    "SGP",
+                    "SK",
+                    "SME",
+                    "SN",
+                    "SP",
+                    "SWE",
+                    "SY",
+                    "SYR",
+                    "TAI",
+                    "TG",
+                    "THA",
+                    "TMN",
+                    "TN",
+                    "TR",
+                    "TT",
+                    "UA",
+                    "USA",
+                    "V",
+                    "VAE",
+                    "VN",
+                    "WAG",
+                    "WAL",
+                    "WAN",
+                    "WD",
+                    "WG",
+                    "WS",
+                    "YU",
+                    "YV",
+                    "Z",
+                    "ZA",
+                    "ZRE",
+                    "ZW"
+                  ]
+                },
+                "relationship": {
+                  "type": "string",
+                  "enum": [
+                    "Son",
+                    "Daughter",
+                    "Parent",
+                    "Spouse",
+                    "Uncle",
+                    "Aunt",
+                    "Brother",
+                    "Sister",
+                    "GrandParent"
+                  ]
+                },
+                "emailAddress": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$"
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "nameInitials": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "nameInitials",
+                    "firstName",
+                    "lastName"
+                  ]
+                },
+                "adharCardNumber": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "preferredLanguage",
+                "dob",
+                "age",
+                "insurancePolicy",
+                "educationalQualification",
+                "maritalStatus",
+                "nationality",
+                "relationship",
+                "height",
+                "weightInkg",
+                "name",
+                "adharCardNumber"
+              ]
+            },
+            "address": {
+              "type": "object",
+              "properties": {
+                "country": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "corrLine1": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "corrLine2": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "corrLine3": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "postalCode": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "postalPin": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "district": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "permnentCity": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "permnentDistrict": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "country",
+                "corrLine1",
+                "corrLine2",
+                "corrLine3",
+                "postalCode",
+                "postalPin",
+                "district",
+                "permnentCity",
+                "permnentDistrict"
+              ]
+            },
+            "phone": {
+              "type": "object",
+              "properties": {
+                "mobileNumber": {
+                  "type": "integer",
+                  "minLength": 1,
+                  "maxLength": 10
+                }
+              },
+              "required": [
+                "mobileNumber"
+              ]
+            },
+            "corr": {
+              "type": "object",
+              "properties": {
+                "homeNumber": {
+                  "type": "integer",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "homeNumber"
+              ]
+            },
+            "employment": {
+              "type": "object",
+              "properties": {
+                "occupation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "otherSourceOfIncome": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "annualIncome": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "natureOfBusiness": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "employerName": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "periodOfEmployment": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "businessRegNo": {
+                  "type": "integer",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "occupation",
+                "otherSourceOfIncome",
+                "annualIncome",
+                "natureOfBusiness",
+                "employerName",
+                "periodOfEmployment",
+                "businessRegNo"
+              ]
+            },
+            "familyDetails": {
+              "type": "object",
+              "properties": {
+                "health": {
+                  "type": "object",
+                  "properties": {
+                    "Father": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "disease": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "disease"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    },
+                    "Mother": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "disease": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "disease"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "Father",
+                    "Mother"
+                  ]
+                },
+                "familyInformation": {
+                  "type": "object",
+                  "properties": {
+                    "Father": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "age": {
+                              "type": "integer"
+                            },
+                            "stateofhealth": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "age",
+                            "stateofhealth"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    },
+                    "Mother": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "age": {
+                              "type": "integer"
+                            },
+                            "stateofhealth": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "age",
+                            "stateofhealth"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "Father",
+                    "Mother"
+                  ]
+                }
+              },
+              "required": [
+                "health",
+                "familyInformation"
+              ]
+            },
+            "previousPolicy": {
+              "type": "object",
+              "properties": {
+                "details": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "nameofinsurance": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "policyno": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "policyvalue": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "premium": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "nameofinsurance",
+                        "policyno",
+                        "policyvalue",
+                        "premium"
+                      ]
+                    }
+                  ]
+                },
+                "declined": {
+                  "type": "object",
+                  "properties": {
+                    "details": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "answer": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "reason": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "answer",
+                            "reason"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "details"
+                  ]
+                }
+              },
+              "required": [
+                "details",
+                "declined"
+              ]
+            },
+            "beneficiaries": {
+              "type": "object",
+              "properties": {
+                "details": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "dob": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "adharCardNumber": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "deathBenifit": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyDigasiri": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyIncome": {
+                          "type": "integer",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "relationship",
+                        "dob",
+                        "adharCardNumber",
+                        "deathBenifit",
+                        "familyDigasiri",
+                        "familyIncome"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "dob": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "adharCardNumber": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "deathBenifit": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyDigasiri": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyIncome": {
+                          "type": "integer",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "relationship",
+                        "dob",
+                        "adharCardNumber",
+                        "deathBenifit",
+                        "familyDigasiri",
+                        "familyIncome"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "details"
+              ]
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "otherDetails": {
+                      "type": "object",
+                      "properties": {
+                        "deductibleAmount": {
+                          "type": "integer"
+                        },
+                        "coverType": {
+                          "type": "string"
+                        },
+                        "livesInsured": {
+                          "type": "string"
+                        },
+                        "numberOfLives": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "applicationType": {
+                      "type": "string"
+                    },
+                    "productType": {
+                      "type": "string"
+                    },
+                    "productName": {
+                      "type": "string"
+                    },
+                    "productCode": {
+                      "type": "string"
+                    },
+                    "residentialExtra": {
+                      "type": "string"
+                    },
+                    "paymentFrequency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitPeriod",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string",
+                                          "minLength": 1
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            }
+          },
+          "required": [
+            "person",
+            "address",
+            "phone",
+            "corr",
+            "employment",
+            "familyDetails",
+            "previousPolicy",
+            "beneficiaries",
+            "individualInterview",
+            "coverages"
+          ]
+        },
+        "spouseInsured": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "preferredLanguage": {
+                  "type": "string",
+                  "enum": [
+                    "English",
+                    "Sinhala",
+                    "Tamil"
+                  ]
+                },
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "educationalQualification": {
+                  "type": "string",
+                  "enum": [
+                    "Graduate/Professional",
+                    "A/L Completed",
+                    "O/L Completed",
+                    "O/L Not Completed"
+                  ]
+                },
+                "maritalStatus": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "nationality": {
+                  "type": "string",
+                  "enum": [
+                    "SL",
+                    "A",
+                    "ADN",
+                    "AFG",
+                    "ALB",
+                    "AND",
+                    "AUS",
+                    "B",
+                    "BD",
+                    "BDS",
+                    "BG",
+                    "BH",
+                    "BOL",
+                    "BR",
+                    "BRN",
+                    "BS",
+                    "BUR",
+                    "BY",
+                    "C",
+                    "CDN",
+                    "CH",
+                    "CHI",
+                    "CI",
+                    "CO",
+                    "CR",
+                    "CY",
+                    "CZ",
+                    "D",
+                    "DK",
+                    "DOM",
+                    "DY",
+                    "DZ",
+                    "EAK",
+                    "EAT",
+                    "EAU",
+                    "EC",
+                    "ES",
+                    "ESP",
+                    "ET",
+                    "ETH",
+                    "EW",
+                    "F",
+                    "FIN",
+                    "FJI",
+                    "FL",
+                    "FR",
+                    "GB",
+                    "GBA",
+                    "GBG",
+                    "GBJ",
+                    "GBM",
+                    "GBZ",
+                    "GCA",
+                    "GH",
+                    "GR",
+                    "GUY",
+                    "H",
+                    "HK",
+                    "HKG",
+                    "HR",
+                    "I",
+                    "IL",
+                    "IND",
+                    "IR",
+                    "IRL",
+                    "IRQ",
+                    "IS",
+                    "J",
+                    "JA",
+                    "JOR",
+                    "K",
+                    "KWT",
+                    "L",
+                    "LAO",
+                    "LAR",
+                    "LS",
+                    "LT",
+                    "LV",
+                    "M",
+                    "MA",
+                    "MAL",
+                    "MC",
+                    "MEX",
+                    "MK",
+                    "MS",
+                    "MW",
+                    "N",
+                    "NA",
+                    "NIC",
+                    "NL",
+                    "NZ",
+                    "P",
+                    "PA",
+                    "PE",
+                    "PK",
+                    "PL",
+                    "PY",
+                    "RA",
+                    "RB",
+                    "RCA",
+                    "RCB",
+                    "RCH",
+                    "RH",
+                    "RI",
+                    "RIM",
+                    "RL",
+                    "RM",
+                    "RMM",
+                    "RN",
+                    "RO",
+                    "ROK",
+                    "ROU",
+                    "RP",
+                    "RSM",
+                    "RUS",
+                    "RWA",
+                    "SD",
+                    "SGP",
+                    "SK",
+                    "SME",
+                    "SN",
+                    "SP",
+                    "SWE",
+                    "SY",
+                    "SYR",
+                    "TAI",
+                    "TG",
+                    "THA",
+                    "TMN",
+                    "TN",
+                    "TR",
+                    "TT",
+                    "UA",
+                    "USA",
+                    "V",
+                    "VAE",
+                    "VN",
+                    "WAG",
+                    "WAL",
+                    "WAN",
+                    "WD",
+                    "WG",
+                    "WS",
+                    "YU",
+                    "YV",
+                    "Z",
+                    "ZA",
+                    "ZRE",
+                    "ZW"
+                  ]
+                },
+                "emailAddress": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$",
+                  "minLength": 1
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "nameInitials": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "nameInitials",
+                    "firstName",
+                    "lastName"
+                  ]
+                },
+                "adharCardNumber": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "preferredLanguage",
+                "dob",
+                "age",
+                "educationalQualification",
+                "maritalStatus",
+                "nationality",
+                "height",
+                "weightInkg",
+                "name",
+                "adharCardNumber"
+              ]
+            },
+            "address": {
+              "type": "object",
+              "properties": {
+                "country": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "corrLine1": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "corrLine2": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "corrLine3": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "postalCode": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "postalPin": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "district": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "permnentCity": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "permnentDistrict": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "country",
+                "corrLine1",
+                "corrLine2",
+                "corrLine3",
+                "postalCode",
+                "postalPin",
+                "district",
+                "permnentCity",
+                "permnentDistrict"
+              ]
+            },
+            "phone": {
+              "type": "object",
+              "properties": {
+                "mobileNumber": {
+                  "type": "integer",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "mobileNumber"
+              ]
+            },
+            "corr": {
+              "type": "object",
+              "properties": {
+                "homeNumber": {
+                  "type": "integer",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "homeNumber"
+              ]
+            },
+            "employment": {
+              "type": "object",
+              "properties": {
+                "occupation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "otherSourceOfIncome": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "annualIncome": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "natureOfBusiness": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "employerName": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "periodOfEmployment": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "businessRegNo": {
+                  "type": "integer",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "occupation",
+                "otherSourceOfIncome",
+                "annualIncome",
+                "natureOfBusiness",
+                "employerName",
+                "periodOfEmployment",
+                "businessRegNo"
+              ]
+            },
+            "familyDetails": {
+              "type": "object",
+              "properties": {
+                "health": {
+                  "type": "object",
+                  "properties": {
+                    "Father": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "disease": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "disease"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    },
+                    "Mother": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "disease": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "disease"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "Father",
+                    "Mother"
+                  ]
+                },
+                "familyInformation": {
+                  "type": "object",
+                  "properties": {
+                    "Father": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "age": {
+                              "type": "integer"
+                            },
+                            "stateofhealth": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "age",
+                            "stateofhealth"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    },
+                    "Mother": {
+                      "type": "object",
+                      "properties": {
+                        "details": {
+                          "type": "object",
+                          "properties": {
+                            "age": {
+                              "type": "integer"
+                            },
+                            "stateofhealth": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "age",
+                            "stateofhealth"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "details"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "Father",
+                    "Mother"
+                  ]
+                }
+              },
+              "required": [
+                "health",
+                "familyInformation"
+              ]
+            },
+            "previousPolicy": {
+              "type": "object",
+              "properties": {
+                "details": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "nameofinsurance": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "policyno": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "policyvalue": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "premium": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "nameofinsurance",
+                        "policyno",
+                        "policyvalue",
+                        "premium"
+                      ]
+                    }
+                  ]
+                },
+                "declined": {
+                  "type": "object",
+                  "properties": {
+                    "details": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "answer": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "reason": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "answer",
+                            "reason"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "details"
+                  ]
+                }
+              },
+              "required": [
+                "details",
+                "declined"
+              ]
+            },
+            "beneficiaries": {
+              "type": "object",
+              "properties": {
+                "details": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "dob": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "adharCardNumber": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "deathBenifit": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyDigasiri": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyIncome": {
+                          "type": "integer",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "relationship",
+                        "dob",
+                        "adharCardNumber",
+                        "deathBenifit",
+                        "familyDigasiri",
+                        "familyIncome"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "relationship": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "dob": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "adharCardNumber": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "deathBenifit": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyDigasiri": {
+                          "type": "integer",
+                          "minLength": 1
+                        },
+                        "familyIncome": {
+                          "type": "integer",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "relationship",
+                        "dob",
+                        "adharCardNumber",
+                        "deathBenifit",
+                        "familyDigasiri",
+                        "familyIncome"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "details"
+              ]
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string",
+                                          "minLength": 1
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "otherDetails": {
+                      "type": "object",
+                      "properties": {
+                        "deductibleAmount": {
+                          "type": "integer"
+                        },
+                        "coverType": {
+                          "type": "string"
+                        },
+                        "livesInsured": {
+                          "type": "string"
+                        },
+                        "numberOfLives": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "applicationType": {
+                      "type": "string"
+                    },
+                    "productType": {
+                      "type": "string"
+                    },
+                    "productName": {
+                      "type": "string"
+                    },
+                    "productCode": {
+                      "type": "string"
+                    },
+                    "residentialExtra": {
+                      "type": "string"
+                    },
+                    "paymentFrequency": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitPeriod",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            }
+          },
+          "required": [
+            "person",
+            "address",
+            "phone",
+            "corr",
+            "employment",
+            "familyDetails",
+            "previousPolicy",
+            "beneficiaries",
+            "individualInterview"
+          ]
+        },
+        "childOne": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "firstName",
+                    "lastName"
+                  ]
+                }
+              },
+              "required": [
+                "dob",
+                "age",
+                "height",
+                "weightInkg",
+                "name"
+              ]
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string"
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            }
+          },
+          "required": [
+            "person",
+            "coverages",
+            "individualInterview"
+          ]
+        },
+        "childTwo": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "firstName",
+                    "lastName"
+                  ]
+                }
+              },
+              "required": [
+                "dob",
+                "age",
+                "height",
+                "weightInkg",
+                "name"
+              ]
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string",
+                                          "minLength": 1
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            }
+          },
+          "required": [
+            "person",
+            "coverages",
+            "individualInterview"
+          ]
+        },
+        "childThree": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "firstName",
+                    "lastName"
+                  ]
+                }
+              },
+              "required": [
+                "dob",
+                "age",
+                "height",
+                "weightInkg",
+                "name"
+              ]
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string"
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            }
+          },
+          "required": [
+            "person",
+            "coverages",
+            "individualInterview"
+          ]
+        },
+        "childFour": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "firstName",
+                    "lastName"
+                  ]
+                }
+              },
+              "required": [
+                "dob",
+                "age",
+                "height",
+                "weightInkg",
+                "name"
+              ]
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string"
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            }
+          },
+          "required": [
+            "person",
+            "coverages",
+            "individualInterview"
+          ]
+        },
+        "childFive": {
+          "type": "object",
+          "properties": {
+            "person": {
+              "type": "object",
+              "properties": {
+                "dob": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "age": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "height": {
+                  "type": "object",
+                  "properties": {
+                    "centimeter": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "centimeter"
+                  ]
+                },
+                "weightInkg": {
+                  "type": "integer",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "firstName",
+                    "lastName"
+                  ]
+                }
+              },
+              "required": [
+                "dob",
+                "age",
+                "height",
+                "weightInkg",
+                "name"
+              ]
+            },
+            "coverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "coverageLookup": {
+                      "type": "string"
+                    },
+                    "benefitPeriod": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    },
+                    "benefitAmount": {
+                      "type": "object",
+                      "properties": {
+                        "applicationValue": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "applicationValue"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "coverageLookup",
+                    "benefitAmount"
+                  ]
+                }
+              ],
+              "minItems": 1,
+              "maxItems": 5
+            },
+            "individualInterview": {
+              "type": "object",
+              "properties": {
+                "answeredQuestions": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "answer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "number"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "disclosures": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "text": {
+                                  "type": "string"
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "reflexiveQuestions": {
+                                  "type": "array",
+                                  "items": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "answer": {
+                                          "type": "string"
+                                        },
+                                        "position": {
+                                          "type": "integer"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "answer",
+                                        "position",
+                                        "text"
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 0,
+                                  "maxItems": 10
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "category",
+                                "text",
+                                "answer",
+                                "type"
+                              ]
+                            }
+                          ],
+                          "minItems": 0,
+                          "maxItems": 10
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "category",
+                        "answer",
+                        "position",
+                        "text"
+                      ]
+                    }
+                  ],
+                  "minItems": 1,
+                  "maxItems": 50
+                }
+              }
+            }
+          },
+          "required": [
+            "person",
+            "coverages",
+            "individualInterview"
+          ]
+        }
+      },
+      "required": [
+        "planName",
+        "applicationType",
+        "productType",
+        "productCode",
+        "proposedInsured"
+      ]
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "paymentFrequency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "paymentMode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accountNo": {
+          "type": "integer",
+          "minLength": 1
+        },
+        "bankName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "branchName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relative": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "firstName"
+              ]
+            },
+            "address": {
+              "type": "object",
+              "properties": {
+                "phone": {
+                  "type": "object",
+                  "properties": {
+                    "contactNo": {
+                      "type": "integer",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "contactNo"
+                  ]
+                }
+              },
+              "required": [
+                "phone"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "address"
+          ]
+        }
+      },
+      "required": [
+        "paymentFrequency",
+        "paymentMode",
+        "accountNo",
+        "bankName",
+        "branchName"
+      ]
+    }
+  },
+  "required": [
+    "caseId",
+    "product",
+    "payment"
+  ]
+}

@@ -1,0 +1,42 @@
+.productName{
+    color: red;
+}
+.breakhere{
+    page-break-before: always;
+}
+
+.body_text{
+    font-family: vardana;
+    font-size: 12px;
+}
+
+.text_margin{
+    margin-right: 2%;
+}
+
+.style_head{
+    background-color: #101010;
+    color: #FFFFFF;
+    width: 99%;
+}
+
+.bottom_border{
+    border-bottom: solid 1px;
+}
+
+.marging_SITable{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+@media (max-width: 767px) {
+    .main_page{
+        width: fit-content;
+    }
+}
+
+
+
+.ios-safeareasubmission, .iosmargintop{
+    margin-top: 26px;
+}

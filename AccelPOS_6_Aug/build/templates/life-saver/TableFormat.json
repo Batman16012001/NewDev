@@ -1,0 +1,164 @@
+{
+
+
+"TableCreateJSON" : 
+[
+  "primaryInsured.coverages",
+  "spouseInsured.coverages",
+  "child1.coverages",
+  "child2.coverages",
+  "child3.coverages",
+  "child4.coverages",
+  "child5.coverages",
+  "illustration.Premiums",
+  "TotalPremium.Premiums",
+  "maturityAmount.Maturity"
+],
+
+
+
+"excludeHeaders" :
+[
+   "eliminationPeriod"
+],
+
+"summarybenefit": [
+  {
+    "Protection Benefit": "Loss of life",
+    "RS": " "
+  },
+  {
+    "Protection Benefit": "Loss of life due to accident",
+    "RS": " "
+  }
+],
+
+"summarybenefitekey" :
+[
+  "Loss of life",
+  "Loss of life due to accident"
+],
+
+"protectionBenefitsRider" :
+[
+  "basic plan","fpur","fibr",
+  "adbr","yrbr","yfpr","yfir",
+  "yadr","fpus","fibs","adbs",
+  "yrbs","yfps","yfis","yads"
+],
+
+"healthBenefitsRider" :
+[
+  "ider","hcer","cmer","fdcr",
+  "yier","yher","ymer","yfcr",
+  "ides","hces","cmes","fdcs",
+  "yies","yhes","ymes","yfcs",
+  "horr","yhor",
+  "zies","zher","zhes","zmer",
+  "zmes","zhor","zier"
+],
+
+"disabilityBenefitsRider" :
+[
+  "pdbr","toar","tosr","ypdr", 
+  "yoar","yosr","pdbs","toas",
+  "toss","ypds","yoas","yoss"
+],
+
+"lossoflife" :
+[
+  "basic plan","fpur","ider", "fibr",
+  "yfpr", "ides", "fibs", "fpus",
+  "yfps", "yier", "yies", "yfir",
+  "yfis", "yrbr", "yrbs", "epur", 
+  "tter", "yter", "yspr"
+
+],
+
+"lossofaccident" :
+[
+  "basic plan" ,"fpur" ,"ider" ,"fibr" ,"yfpr" ,
+  "ides", "fibs" ,"fpus", "yfps" ,"yier" ,"yies" ,
+  "yfir" ,"yfis" ,"yrbr" ,"yrbs", "adbr", "adbs" ,
+  "yadr", "yads" ,"epur" ,"tter" ,"yter" ,"yspr", 
+  "badr" ,"ybdr"
+],
+
+"DivShowHide":
+[   
+  "spouseInsured",
+  "child1",
+  "child2",
+  "child3",
+  "child4",
+  "child5"
+],
+"maturitybenefitjson" :
+[
+  {
+  "5" :{
+    "guaranteedMaturity":"3",
+    "guaranteedMaturity1" : "7",
+    "guaranteedMaturity2": "10",
+    "guaranteedMaturity3": "20",
+    "guaranteedMaturity4": "25",
+    "illustratedMaturity" :"10"
+  },
+  "10" :{
+    "guaranteedMaturity":"4",
+    "guaranteedMaturity1" : "10",
+    "guaranteedMaturity2": "15",
+    "guaranteedMaturity3": "20",
+    "guaranteedMaturity4": "25",
+    "illustratedMaturity" :"15"
+  },
+  "15" :{
+    "guaranteedMaturity":"4",
+    "guaranteedMaturity1" : "10",
+    "guaranteedMaturity2": "15",
+    "guaranteedMaturity3": "20",
+    "guaranteedMaturity4": "25",
+    "illustratedMaturity" :"15"
+  },
+  "25" :{
+    "guaranteedMaturity":"5",
+    "guaranteedMaturity1" : "10",
+    "guaranteedMaturity2": "15",
+    "guaranteedMaturity3": "20",
+    "guaranteedMaturity4": "25",
+    "illustratedMaturity" :"15"
+  }
+  }
+],
+"replacement" :
+[
+  {
+    "coverageLookup":"CoverageLookup",
+    "benefitPeriod":"BenefitPeriod",
+    "benefitAmount":"BenefitAmount",
+    "Premium":"Premium",
+    "year_option":"Policy year",
+    "Annual_Premium":"Annual Contribution (RS)",
+    "Account_Balance_4" :" Balance Assumed Dividend Rate @ 4% p.a.", 
+    "Account_Balance_8" :" Balance Assumed Dividend Rate @ 8% p.a." ,
+    "Account_Balance_12" : "Balance Assumed Dividend Rate @ 12% p.a.",
+    "Surrende_Value_4":"Surrender Assumed Dividend Rate @ 4% p.a.", 
+    "Surrende_Value_8"  :"Surrender Assumed Dividend Rate @ 8% p.a.",
+    "Surrende_Value_12":"Surrender Assumed Dividend Rate @ 12% p.a.",
+    "Monthly":"Monthly ",
+    "Quarterly":"Quarterly ",
+    "Half Yearly":"Half Yearly ",
+    "Annually":"Annually  ",
+    "guaranteedMaturity":"Guaranteed Advance Payment payable at the end of the",
+    "guaranteedMaturity1":"Guaranteed Advance Payment payable at the end of the",
+    "guaranteedMaturity2":"Guaranteed Advance Payment payable at the end of the",
+    "illustratedMaturity":"Total Illustrated Maturity Benefit with Bonus payable at the end of the ",
+    "guaranteedMaturity3":"Guaranteed Advance Payment payable at the end of the",
+    "guaranteedMaturity4":"Guaranteed Advance Payment payable at the end of the",
+    "guaranteedMaturity5":"Guaranteed Advance Payment payable at the end of the"
+  }
+]
+
+
+
+}

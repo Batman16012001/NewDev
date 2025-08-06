@@ -1,0 +1,364 @@
+PlanName_Abbreviation,PlanCode,Product_Type,Payment_Freqeuncy,Life,Abbreviation,primaryInsured Rider/ Rider Name,Dependency_C,Dependency_O,Visibility,planWiseSumAssMin,planWiseSumAssMax,DBNAME,Remarks,TLR ,SINGLE_FACTOR,Rider_output_Name
+0,0,0,0,0,0,0,0,0,0,0,0,NA,,,NA,
+Endowment_basic_plan_R,3,Life,R,primaryInsured,basic plan,primaryInsured Rider,,fibr,,,,PL3_2     ,,basic_plan+fpur+fdtr+fibr,NA,Basic Sum Assured
+Endowment_fpur,3,Life,R,primaryInsured,fpur,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,NA,Family Protection (Loss of Life)
+Endowment_ider,3,Life,R,primaryInsured,ider,Rider 2,fdtr,fdcr,,0.5*basic_plan,7*basic_plan,FDB       ,,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_fdtr,3,Life,R,primaryInsured,fdtr,Rider 3,ider,,N,1*ider,1*ider,NA,Load Default Value of IDER ,,NA,
+Endowment_fdcr,3,Life,R,primaryInsured,fdcr,Rider 4,ider,,,100000,1*ider,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Endowment_adbr,3,Life,R,primaryInsured,adbr,Rider 5,pdbr::toar::tosr,,,1*basic_plan,(basic_plan+fpur)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Endowment_pdbr,3,Life,R,primaryInsured,pdbr,Rider 6,adbr::toar::tosr,,,100000,0.5*toar,CPDB,,,NA,Partial Permanent Disability (PDB)
+Endowment_toar,3,Life,R,primaryInsured,toar,Rider 7,adbr::pdbr::tosr,,,1*basic_plan,10*basic_plan| 2*TLR<basic_plan+fpur+fdtr+fibr>,TPDA      ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Total Permanent Disability Accident (Monthly Income for 10 years)
+Endowment_tosr,3,Life,R,primaryInsured,tosr,Rider 8,adbr::pdbr::toar,,,1*toar,1*toar,TPDS      ,,,NA,Total Permanent Disability Sickness (Monthly Income for 10 years)
+Endowment_hcer,3,Life,R,primaryInsured,hcer,Rider 9,,,,1000,2 %TLR<basic_plan+fpur+fdtr+fibr>,HCB_N     ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Hospital Cash (Per day hospitalization benefit)
+Endowment_cmer,3,Life,R,primaryInsured,cmer,Rider 10,,,,100000,50 %TLR <basic_plan+fpur+fdtr+fibr>,CMM,0,,NA,Major Surgery (526 list of Surgeries)
+Endowment_fibr,3,Life,R,primaryInsured,fibr,Rider 11,,basic_plan,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003R,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Endowment_horr,3,Life,R,primaryInsured,horr,Rider 12,,,,200000,50%TLR<basic_plan+fpur+fdtr+fibr>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_yrbr,3,Life,R,spouseInsured,yrbr,primaryInsured Rider,,yfir,,100000,1*basic_plan ,FPB       ,Should not e*ceed primaryInsured Life Rider Amounts, YRBR+YFPR+YFTR+YFIR,NA,Yugadivi
+Endowment_yfpr,3,Life,R,spouseInsured,yfpr,Rider 1,,,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Protection (Loss of Life)
+Endowment_yier,3,Life,R,spouseInsured,yier,Rider 2,yftr,,,0.5*yrbr,7*yrbr,FDB       ,0,0,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_yftr,3,Life,R,spouseInsured,yftr,Rider 3,yier,,N,1*yier,1*yier,NA,Load Default Value of YIER,,NA,
+Endowment_yfcr,3,Life,R,spouseInsured,yfcr,Rider 4,yier,,,100000,1*yier,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Endowment_yadr,3,Life,R,spouseInsured,yadr,Rider 5,ypdr::yoar,,,1*yrbr,(yrbr + yfpr)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Endowment_ypdr,3,Life,R,spouseInsured,ypdr,Rider 6,yadr,,,100000,0.5*yoar,CPDB,,,NA,Partial & Permanent Disability (PDB)
+Endowment_yoar,3,Life,R,spouseInsured,yoar,Rider 7,yadr,,,1*yrbr,10* yrbr|2*TLR< yrbr+yfpr+yftr+yfir>,TPDA      ,,,NA,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Endowment_yosr,3,Life,R,spouseInsured,yosr,Rider 8,yoar,,,1*yoar,1*yoar,TPDS      ,,,NA,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Endowment_yher,3,Life,R,spouseInsured,yher,Rider 9,,,,1000,2 %TLR< yrbr+yfpr+yftr+yfir>,HCB_N     ,,,NA,Ceylinco Life Hospital Cash Plus
+Endowment_ymer,3,Life,R,spouseInsured,ymer,Rider 10,,,,100000,50 %TLR< yrbr+yfpr+yftr+yfir>,CMM,0,0,NA,Major Surgery (526 list of Surgeries)
+Endowment_yfir,3,Life,R,spouseInsured,yfir,Rider 11,,yrbr,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Endowment_yhor,3,Life,R,spouseInsured,yhor,Rider 12,,,,200000,50%TLR< yrbr+yfpr+yftr+yfir>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_child1_zier,3,Life,R,child1,zier,Rider 1,child2_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child1_zher,3,Life,R,child1,zher,Rider 2,child2_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Endowment_child1_zmer,3,Life,R,child1,zmer,Rider 3,child2_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Endowment_child1_zhor,3,Life,R,child1,zhor,Rider 4,child2_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_child2_zier,3,Life,R,child2,zier,Rider 1,child1_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child2_zher,3,Life,R,child2,zher,Rider 2,child1_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Endowment_child2_zmer,3,Life,R,child2,zmer,Rider 3,child1_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Endowment_child2_zhor,3,Life,R,child2,zhor,Rider 4,child1_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_child3_zier,3,Life,R,child3,zier,Rider 1,child1_zier::child2_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child3_zher,3,Life,R,child3,zher,Rider 2,child1_zher::child2_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Endowment_child3_zmer,3,Life,R,child3,zmer,Rider 3,child1_zmer::child2_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Endowment_child3_zhor,3,Life,R,child3,zhor,Rider 4,child1_zhor::child2_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_child4_zier,3,Life,R,child4,zier,Rider 1,child1_zier::child2_zier::child3_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child4_zher,3,Life,R,child4,zher,Rider 2,child1_zher::child2_zher::child3_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Endowment_child4_zmer,3,Life,R,child4,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Endowment_child4_zhor,3,Life,R,child4,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_child5_zier,3,Life,R,child5,zier,Rider 1,child1_zier::child2_zier::child3_zier::child4_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child5_zher,3,Life,R,child5,zher,Rider 2,child1_zher::child2_zher::child3_zher::child4_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Endowment_child5_zmer,3,Life,R,child5,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child4_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Endowment_child5_zhor,3,Life,R,child5,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child4_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Endowment_basic_plan_S,3,Life,S,primaryInsured,003s,primaryInsured Rider,,fibs,,,,PL3_2     ,,TLR = 003S+FPUS+FDTS+FIBS,SFC,
+Endowment_fpus,3,Life,S,primaryInsured,fpus,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,SFC,Family Protection (Loss of Life)
+Endowment_ides,3,Life,S,primaryInsured,ides,Rider 2,fdts,,,0.5*basic_plan,7*basic_plan,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_fdts,3,Life,S,primaryInsured,fdts,Rider 3,ides,,N,1*ides,1*ides,NA,Load Default Value of IDES,,SFC,
+Endowment_fdcs,3,Life,S,primaryInsured,fdcs,Rider 4,,ides,,100000,1*ides,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Endowment_adbs,3,Life,S,primaryInsured,adbs,Rider 5,pdbs::toas,,,1*basic_plan,(basic_plan + fpus)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Endowment_pdbs,3,Life,S,primaryInsured,pdbs,Rider 6,adbs,,,100000,0.5*toas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Endowment_toas,3,Life,S,primaryInsured,toas,Rider 7,adbs::toss,,,1*basic_plan,10* basic_plan|2*TLR<basic_plan+fpus_fdts+fibs>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Endowment_toss,3,Life,S,primaryInsured,toss,Rider 8,toas,,,1*toas,1*toas,TPDS      ,,,SFC,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Endowment_fibs,3,Life,S,primaryInsured,fibs,Rider 11,,003S -O,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003S,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Endowment_yrbs,3,Life,S,spouseInsured,yrbs,primaryInsured Rider,,,,100000,1*basic_plan,FPB       ,Should not exceed primaryInsured Life Rider Amounts,TLR = YRBS+YFPS+YFTS+YFIS,SFC,
+Endowment_yfps,3,Life,S,spouseInsured,yfps,Rider 1,,,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Protection (Loss of Life)
+Endowment_yies,3,Life,S,spouseInsured,yies,Rider 2,yfts,,,0.5*yrbs,yrbs *7  ,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_yfts,3,Life,S,spouseInsured,yfts,Rider 3,yies,,N,1*yies,1*yies,NA,Load Default Value of YIES,,SFC,
+Endowment_yfcs,3,Life,S,spouseInsured,yfcs,Rider 4,,yies,,100000,1*yies,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Endowment_yads,3,Life,S,spouseInsured,yads,Rider 5,ypds::yoas,,,1*yrbs,(yrbs + yfps)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Endowment_ypds,3,Life,S,spouseInsured,ypds,Rider 6,yads,,,100000,0.5*yoas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Endowment_yoas,3,Life,S,spouseInsured,yoas,Rider 7,yads::yoss,,,1*yrbs,10* yrbs|2*TLR<yrbs+yfps+yfts+yfis>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Endowment_yoss,3,Life,S,spouseInsured,yoss,Rider 8,yads,,,1*yoas,1*yoas,TPDS      ,,,SFC,
+Endowment_yfis,3,Life,S,spouseInsured,yfis,Rider 11,,yrbs,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Endowment_child1_zies,3,Life,S,child1,zies,Rider 1,child2_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child2_zies,3,Life,S,child2,zies,Rider 1,child1_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child3_zies,3,Life,S,child3,zies,Rider 1,child1_zies::child2_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child4_zies,3,Life,S,child4,zies,Rider 1,child1_zies::child2_zies::child3_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Endowment_child5_zies,3,Life,S,child5,zies,Rider 1,child1_zies::child2_zies::child3_zies::child4_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_basic_plan_R,6,Life,R,primaryInsured,006r,primaryInsured Rider,,fibr,,,,PL6_2     ,,basic_plan+fpur+fdtr+fibr,NA,
+Advance_Payment_fpur,6,Life,R,primaryInsured,fpur,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,NA,Family Protection (Loss of Life)
+Advance_Payment_ider,6,Life,R,primaryInsured,ider,Rider 2,fdtr,fdcr,,0.5*basic_plan,7*basic_plan,FDB       ,,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_fdtr,6,Life,R,primaryInsured,fdtr,Rider 3,ider,,N,1*ider,1*ider,NA,Load Default Value of IDER ,,NA,
+Advance_Payment_fdcr,6,Life,R,primaryInsured,fdcr,Rider 4,ider,,,100000,1*ider,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Advance_Payment_adbr,6,Life,R,primaryInsured,adbr,Rider 5,pdbr::toar::tosr,,,1*basic_plan,(basic_plan+fpur)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Advance_Payment_pdbr,6,Life,R,primaryInsured,pdbr,Rider 6,adbr::toar::tosr,,,100000,0.5*toar,CPDB,,,NA,Partial Permanent Disability (PDB)
+Advance_Payment_toar,6,Life,R,primaryInsured,toar,Rider 7,adbr::pdbr::tosr,,,1*basic_plan,10*basic_plan| 2*TLR<basic_plan+fpur+fdtr+fibr>,TPDA      ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Total Permanent Disability Accident (Monthly Income for 10 years)
+Advance_Payment_tosr,6,Life,R,primaryInsured,tosr,Rider 8,adbr::pdbr::toar,,,1*toar,1*toar,TPDS      ,,,NA,Total Permanent Disability Sickness (Monthly Income for 10 years)
+Advance_Payment_hcer,6,Life,R,primaryInsured,hcer,Rider 9,,,,1000,2 %TLR<basic_plan+fpur+fdtr+fibr>,HCB_N     ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Hospital Cash (Per day hospitalization benefit)
+Advance_Payment_cmer,6,Life,R,primaryInsured,cmer,Rider 10,,,,100000,50 %TLR <basic_plan+fpur+fdtr+fibr>,CMM,0,,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_fibr,6,Life,R,primaryInsured,fibr,Rider 11,,basic_plan,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003R,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Advance_Payment_horr,6,Life,R,primaryInsured,horr,Rider 12,,,,200000,50%TLR<basic_plan+fpur+fdtr+fibr>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_yrbr,6,Life,R,spouseInsured,yrbr,primaryInsured Rider,,yfir,,100000,1*basic_plan ,FPB       ,Should not e*ceed primaryInsured Life Rider Amounts, YRBR+YFPR+YFTR+YFIR,NA,Yugadivi
+Advance_Payment_yfpr,6,Life,R,spouseInsured,yfpr,Rider 1,,,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Protection (Loss of Life)
+Advance_Payment_yier,6,Life,R,spouseInsured,yier,Rider 2,yftr,,,0.5*yrbr,7*yrbr,FDB       ,0,0,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_yftr,6,Life,R,spouseInsured,yftr,Rider 3,yier,,N,1*yier,1*yier,NA,Load Default Value of YIER,,NA,
+Advance_Payment_yfcr,6,Life,R,spouseInsured,yfcr,Rider 4,yier,,,100000,1*yier,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Advance_Payment_yadr,6,Life,R,spouseInsured,yadr,Rider 5,ypdr::yoar,,,1*yrbr,(yrbr + yfpr)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Advance_Payment_ypdr,6,Life,R,spouseInsured,ypdr,Rider 6,yadr,,,100000,0.5*yoar,CPDB,,,NA,Partial & Permanent Disability (PDB)
+Advance_Payment_yoar,6,Life,R,spouseInsured,yoar,Rider 7,yadr,,,1*yrbr,10* yrbr|2*TLR< yrbr+yfpr+yftr+yfir>,TPDA      ,,,NA,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Advance_Payment_yosr,6,Life,R,spouseInsured,yosr,Rider 8,yoar,,,1*yoar,1*yoar,TPDS      ,,,NA,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Advance_Payment_yher,6,Life,R,spouseInsured,yher,Rider 9,,,,1000,2 %TLR< yrbr+yfpr+yftr+yfir>,HCB_N     ,,,NA,Ceylinco Life Hospital Cash Plus
+Advance_Payment_ymer,6,Life,R,spouseInsured,ymer,Rider 10,,,,100000,50 %TLR< yrbr+yfpr+yftr+yfir>,CMM,0,0,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_yfir,6,Life,R,spouseInsured,yfir,Rider 11,,yrbr,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Advance_Payment_yhor,6,Life,R,spouseInsured,yhor,Rider 12,,,,200000,50%TLR< yrbr+yfpr+yftr+yfir>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_child1_zier,6,Life,R,child1,zier,Rider 1,child2_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child1_zher,6,Life,R,child1,zher,Rider 2,child2_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Advance_Payment_child1_zmer,6,Life,R,child1,zmer,Rider 3,child2_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_child1_zhor,6,Life,R,child1,zhor,Rider 4,child2_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_child2_zier,6,Life,R,child2,zier,Rider 1,child1_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child2_zher,6,Life,R,child2,zher,Rider 2,child1_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Advance_Payment_child2_zmer,6,Life,R,child2,zmer,Rider 3,child1_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_child2_zhor,6,Life,R,child2,zhor,Rider 4,child1_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_child3_zier,6,Life,R,child3,zier,Rider 1,child1_zier::child2_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child3_zher,6,Life,R,child3,zher,Rider 2,child1_zher::child2_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Advance_Payment_child3_zmer,6,Life,R,child3,zmer,Rider 3,child1_zmer::child2_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_child3_zhor,6,Life,R,child3,zhor,Rider 4,child1_zhor::child2_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_child4_zier,6,Life,R,child4,zier,Rider 1,child1_zier::child2_zier::child3_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child4_zher,6,Life,R,child4,zher,Rider 2,child1_zher::child2_zher::child3_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Advance_Payment_child4_zmer,6,Life,R,child4,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_child4_zhor,6,Life,R,child4,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_child5_zier,6,Life,R,child5,zier,Rider 1,child1_zier::child2_zier::child3_zier::child4_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child5_zher,6,Life,R,child5,zher,Rider 2,child1_zher::child2_zher::child3_zher::child4_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Advance_Payment_child5_zmer,6,Life,R,child5,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child4_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Advance_Payment_child5_zhor,6,Life,R,child5,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child4_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Advance_Payment_basic_plan_S,6,Life,S,primaryInsured,006s,primaryInsured Rider,,fibs,,,,PL6_2     ,,TLR = 003S+FPUS+FDTS+FIBS,SFC,
+Advance_Payment_fpus,6,Life,S,primaryInsured,fpus,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,SFC,Family Protection (Loss of Life)
+Advance_Payment_ides,6,Life,S,primaryInsured,ides,Rider 2,fdts,,,0.5*basic_plan,7*basic_plan,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_fdts,6,Life,S,primaryInsured,fdts,Rider 3,ides,,N,1*ides,1*ides,NA,Load Default Value of IDES,,SFC,
+Advance_Payment_fdcs,6,Life,S,primaryInsured,fdcs,Rider 4,,ides,,100000,1*ides,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Advance_Payment_adbs,6,Life,S,primaryInsured,adbs,Rider 5,pdbs::toas,,,1*basic_plan,(basic_plan + fpus)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Advance_Payment_pdbs,6,Life,S,primaryInsured,pdbs,Rider 6,adbs,,,100000,0.5*toas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Advance_Payment_toas,6,Life,S,primaryInsured,toas,Rider 7,adbs::toss,,,1*basic_plan,10* basic_plan|2*TLR<basic_plan+fpus_fdts+fibs>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Advance_Payment_toss,6,Life,S,primaryInsured,toss,Rider 8,toas,,,1*toas,1*toas,TPDS      ,,,SFC,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Advance_Payment_fibs,6,Life,S,primaryInsured,fibs,Rider 11,,003S -O,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003S,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Advance_Payment_yrbs,6,Life,S,spouseInsured,yrbs,primaryInsured Rider,,,,100000,1*basic_plan,FPB       ,Should not exceed primaryInsured Life Rider Amounts,TLR = YRBS+YFPS+YFTS+YFIS,SFC,
+Advance_Payment_yfps,6,Life,S,spouseInsured,yfps,Rider 1,,,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Protection (Loss of Life)
+Advance_Payment_yies,6,Life,S,spouseInsured,yies,Rider 2,yfts,,,0.5*yrbs,yrbs *7  ,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_yfts,6,Life,S,spouseInsured,yfts,Rider 3,yies,,N,1*yies,1*yies,NA,Load Default Value of YIES,,SFC,
+Advance_Payment_yfcs,6,Life,S,spouseInsured,yfcs,Rider 4,,yies,,100000,1*yies,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Advance_Payment_yads,6,Life,S,spouseInsured,yads,Rider 5,ypds::yoas,,,1*yrbs,(yrbs + yfps)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Advance_Payment_ypds,6,Life,S,spouseInsured,ypds,Rider 6,yads,,,100000,0.5*yoas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Advance_Payment_yoas,6,Life,S,spouseInsured,yoas,Rider 7,yads::yoss,,,1*yrbs,10* yrbs|2*TLR<yrbs+yfps+yfts+yfis>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Advance_Payment_yoss,6,Life,S,spouseInsured,yoss,Rider 8,yads,,,1*yoas,1*yoas,TPDS      ,,,SFC,
+Advance_Payment_yfis,6,Life,S,spouseInsured,yfis,Rider 11,,yrbs,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Advance_Payment_child1_zies,6,Life,S,child1,zies,Rider 1,child2_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child2_zies,6,Life,S,child2,zies,Rider 1,child1_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child3_zies,6,Life,S,child3,zies,Rider 1,child1_zies::child2_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child4_zies,6,Life,S,child4,zies,Rider 1,child1_zies::child2_zies::child3_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Advance_Payment_child5_zies,6,Life,S,child5,zies,Rider 1,child1_zies::child2_zies::child3_zies::child4_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_basic_plan_R,44,Life,R,primaryInsured,44r,primaryInsured Rider,,fibr,,,,PL44      ,,basic_plan+fpur+fdtr+fibr,NA,
+Uthum_fpur,44,Life,R,primaryInsured,fpur,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,NA,Family Protection (Loss of Life)
+Uthum_ider,44,Life,R,primaryInsured,ider,Rider 2,fdtr,fdcr,,0.5*basic_plan,7*basic_plan,FDB_44,,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_fdtr,44,Life,R,primaryInsured,fdtr,Rider 3,ider,,N,1*ider,1*ider,NA,Load Default Value of IDER ,,NA,
+Uthum_fdcr,44,Life,R,primaryInsured,fdcr,Rider 4,ider,,,100000,1*ider,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Uthum_adbr,44,Life,R,primaryInsured,adbr,Rider 5,pdbr::toar::tosr,,,1*basic_plan,(basic_plan+fpur)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Uthum_pdbr,44,Life,R,primaryInsured,pdbr,Rider 6,adbr::toar::tosr,,,100000,0.5*toar,CPDB,,,NA,Partial Permanent Disability (PDB)
+Uthum_toar,44,Life,R,primaryInsured,toar,Rider 7,adbr::pdbr::tosr,,,1*basic_plan,10*basic_plan| 2*TLR<basic_plan+fpur+fdtr+fibr>,TPDA      ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Total Permanent Disability Accident (Monthly Income for 10 years)
+Uthum_tosr,44,Life,R,primaryInsured,tosr,Rider 8,adbr::pdbr::toar,,,1*toar,1*toar,TPDS      ,,,NA,Total Permanent Disability Sickness (Monthly Income for 10 years)
+Uthum_hcer,44,Life,R,primaryInsured,hcer,Rider 9,,,,1000,2 %TLR<basic_plan+fpur+fdtr+fibr>,HCB_N     ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Hospital Cash (Per day hospitalization benefit)
+Uthum_cmer,44,Life,R,primaryInsured,cmer,Rider 10,,,,100000,50 %TLR <basic_plan+fpur+fdtr+fibr>,CMM,0,,NA,Major Surgery (526 list of Surgeries)
+Uthum_fibr,44,Life,R,primaryInsured,fibr,Rider 11,,basic_plan,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003R,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Uthum_horr,44,Life,R,primaryInsured,horr,Rider 12,,,,200000,50%TLR<basic_plan+fpur+fdtr+fibr>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_yrbr,44,Life,R,spouseInsured,yrbr,primaryInsured Rider,,yfir,,100000,1*basic_plan ,FPB       ,Should not e*ceed primaryInsured Life Rider Amounts, YRBR+YFPR+YFTR+YFIR,NA,Yugadivi
+Uthum_yfpr,44,Life,R,spouseInsured,yfpr,Rider 1,,,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Protection (Loss of Life)
+Uthum_yier,44,Life,R,spouseInsured,yier,Rider 2,yftr,,,0.5*yrbr,7*yrbr,FDB_44,0,0,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_yftr,44,Life,R,spouseInsured,yftr,Rider 3,yier,,N,1*yier,1*yier,NA,Load Default Value of YIER,,NA,
+Uthum_yfcr,44,Life,R,spouseInsured,yfcr,Rider 4,yier,,,100000,1*yier,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Uthum_yadr,44,Life,R,spouseInsured,yadr,Rider 5,ypdr::yoar,,,1*yrbr,(yrbr + yfpr)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Uthum_ypdr,44,Life,R,spouseInsured,ypdr,Rider 6,yadr,,,100000,0.5*yoar,CPDB,,,NA,Partial & Permanent Disability (PDB)
+Uthum_yoar,44,Life,R,spouseInsured,yoar,Rider 7,yadr,,,1*yrbr,10* yrbr|2*TLR< yrbr+yfpr+yftr+yfir>,TPDA      ,,,NA,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Uthum_yosr,44,Life,R,spouseInsured,yosr,Rider 8,yoar,,,1*yoar,1*yoar,TPDS      ,,,NA,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Uthum_yher,44,Life,R,spouseInsured,yher,Rider 9,,,,1000,2 %TLR< yrbr+yfpr+yftr+yfir>,HCB_N     ,,,NA,Ceylinco Life Hospital Cash Plus
+Uthum_ymer,44,Life,R,spouseInsured,ymer,Rider 10,,,,100000,50 %TLR< yrbr+yfpr+yftr+yfir>,CMM,0,0,NA,Major Surgery (526 list of Surgeries)
+Uthum_yfir,44,Life,R,spouseInsured,yfir,Rider 11,,yrbr,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Uthum_yhor,44,Life,R,spouseInsured,yhor,Rider 12,,,,200000,50%TLR< yrbr+yfpr+yftr+yfir>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_child1_zier,44,Life,R,child1,zier,Rider 1,child2_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child1_zher,44,Life,R,child1,zher,Rider 2,child2_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Uthum_child1_zmer,44,Life,R,child1,zmer,Rider 3,child2_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Uthum_child1_zhor,44,Life,R,child1,zhor,Rider 4,child2_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_child2_zier,44,Life,R,child2,zier,Rider 1,child1_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child2_zher,44,Life,R,child2,zher,Rider 2,child1_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Uthum_child2_zmer,44,Life,R,child2,zmer,Rider 3,child1_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Uthum_child2_zhor,44,Life,R,child2,zhor,Rider 4,child1_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_child3_zier,44,Life,R,child3,zier,Rider 1,child1_zier::child2_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child3_zher,44,Life,R,child3,zher,Rider 2,child1_zher::child2_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Uthum_child3_zmer,44,Life,R,child3,zmer,Rider 3,child1_zmer::child2_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Uthum_child3_zhor,44,Life,R,child3,zhor,Rider 4,child1_zhor::child2_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_child4_zier,44,Life,R,child4,zier,Rider 1,child1_zier::child2_zier::child3_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child4_zher,44,Life,R,child4,zher,Rider 2,child1_zher::child2_zher::child3_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Uthum_child4_zmer,44,Life,R,child4,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Uthum_child4_zhor,44,Life,R,child4,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_child5_zier,44,Life,R,child5,zier,Rider 1,child1_zier::child2_zier::child3_zier::child4_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child5_zher,44,Life,R,child5,zher,Rider 2,child1_zher::child2_zher::child3_zher::child4_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Uthum_child5_zmer,44,Life,R,child5,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child4_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Uthum_child5_zhor,44,Life,R,child5,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child4_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Uthum_basic_plan_S,44,Life,S,primaryInsured,44s,primaryInsured Rider,,fibs,,,,PL44    ,,TLR = 003S+FPUS+FDTS+FIBS,SFC,
+Uthum_fpus,44,Life,S,primaryInsured,fpus,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,SFC,Family Protection (Loss of Life)
+Uthum_ides,44,Life,S,primaryInsured,ides,Rider 2,fdts,,,0.5*basic_plan,7*basic_plan,FDB_44,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_fdts,44,Life,S,primaryInsured,fdts,Rider 3,ides,,N,1*ides,1*ides,NA,Load Default Value of IDES,,SFC,
+Uthum_fdcs,44,Life,S,primaryInsured,fdcs,Rider 4,,ides,,100000,1*ides,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Uthum_adbs,44,Life,S,primaryInsured,adbs,Rider 5,pdbs::toas,,,1*basic_plan,(basic_plan + fpus)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Uthum_pdbs,44,Life,S,primaryInsured,pdbs,Rider 6,adbs,,,100000,0.5*toas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Uthum_toas,44,Life,S,primaryInsured,toas,Rider 7,adbs::toss,,,1*basic_plan,10* basic_plan|2*TLR<basic_plan+fpus_fdts+fibs>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Uthum_toss,44,Life,S,primaryInsured,toss,Rider 8,toas,,,1*toas,1*toas,TPDS      ,,,SFC,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Uthum_fibs,44,Life,S,primaryInsured,fibs,Rider 11,basic_plan,,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003S,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Uthum_yrbs,44,Life,S,spouseInsured,yrbs,primaryInsured Rider,,,,100000,1*basic_plan,FPB       ,Should not exceed primaryInsured Life Rider Amounts,TLR = YRBS+YFPS+YFTS+YFIS,SFC,
+Uthum_yfps,44,Life,S,spouseInsured,yfps,Rider 1,,,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Protection (Loss of Life)
+Uthum_yies,44,Life,S,spouseInsured,yies,Rider 2,yfts,,,0.5*yrbs,yrbs *7  ,FDB_44,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_yfts,44,Life,S,spouseInsured,yfts,Rider 3,yies,,N,1*yies,1*yies,NA,Load Default Value of YIES,,SFC,
+Uthum_yfcs,44,Life,S,spouseInsured,yfcs,Rider 4,,yies,,100000,1*yies,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Uthum_yads,44,Life,S,spouseInsured,yads,Rider 5,ypds::yoas,,,1*yrbs,(yrbs + yfps)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Uthum_ypds,44,Life,S,spouseInsured,ypds,Rider 6,yads,,,100000,0.5*yoas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Uthum_yoas,44,Life,S,spouseInsured,yoas,Rider 7,yads::yoss,,,1*yrbs,10* yrbs|2*TLR<yrbs+yfps+yfts+yfis>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Uthum_yoss,44,Life,S,spouseInsured,yoss,Rider 8,yads,,,1*yoas,1*yoas,TPDS      ,,,SFC,
+Uthum_yfis,44,Life,S,spouseInsured,yfis,Rider 11,,yrbs,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Uthum_child1_zies,44,Life,S,child1,zies,Rider 1,child2_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child2_zies,44,Life,S,child2,zies,Rider 1,child1_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child3_zies,44,Life,S,child3,zies,Rider 1,child1_zies::child2_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child4_zies,44,Life,S,child4,zies,Rider 1,child1_zies::child2_zies::child3_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Uthum_child5_zies,44,Life,S,child5,zies,Rider 1,child1_zies::child2_zies::child3_zies::child4_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_basic_plan_R,66,Life,R,primaryInsured,66r,primaryInsured Rider,fpur::adbr::pdbr::toar::tosr,,,,,BA31,,basic_plan+fpur+fdtr+fibr,NA,
+Ceylinco_Life_Randaru_Plus_fpur,66,Life,R,primaryInsured,fpur,Rider 1,,fibr,,9*basic_plan,9*basic_plan,FPB       ,,,NA,Family Protection (Loss of Life)
+Ceylinco_Life_Randaru_Plus_ider,66,Life,R,primaryInsured,ider,Rider 2,fdtr,fdcr,,0.5*basic_plan,7*basic_plan,FDB_44,,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_fdtr,66,Life,R,primaryInsured,fdtr,Rider 3,ider,,N,1*ider,1*ider,NA,Load Default Value of IDER ,,NA,
+Ceylinco_Life_Randaru_Plus_fdcr,66,Life,R,primaryInsured,fdcr,Rider 4,ider,,,100000,1*ider,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Ceylinco_Life_Randaru_Plus_adbr,66,Life,R,primaryInsured,adbr,Rider 5,fpur::pdbr::toar::tosr,,,10*basic_plan,10*basic_plan,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Ceylinco_Life_Randaru_Plus_pdbr,66,Life,R,primaryInsured,pdbr,Rider 6,fpur::adbr::toar::tosr,,,10*basic_plan,10*basic_plan,CPDB,,,NA,Partial Permanent Disability (PDB)
+Ceylinco_Life_Randaru_Plus_toar,66,Life,R,primaryInsured,toar,Rider 7,fpur::adbr::pdbr::tosr,,,10*basic_plan,10*basic_plan,TPDA      ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Total Permanent Disability Accident (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_tosr,66,Life,R,primaryInsured,tosr,Rider 8,fpur::adbr::pdbr::toar,,,10*basic_plan,10*basic_plan,TPDS      ,,,NA,Total Permanent Disability Sickness (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_hcer,66,Life,R,primaryInsured,hcer,Rider 9,,,,1000,2 %TLR<basic_plan+fpur+fdtr+fibr>,HCB_N     ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Hospital Cash (Per day hospitalization benefit)
+Ceylinco_Life_Randaru_Plus_cmer,66,Life,R,primaryInsured,cmer,Rider 10,,,,100000,50 %TLR <basic_plan+fpur+fdtr+fibr>,CMM,0,,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_fibr,66,Life,R,primaryInsured,fibr,Rider 11,,basic_plan,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003R,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Ceylinco_Life_Randaru_Plus_horr,66,Life,R,primaryInsured,horr,Rider 12,,,,200000,50%TLR<basic_plan+fpur+fdtr+fibr>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_yrbr,66,Life,R,spouseInsured,yrbr,primaryInsured Rider,,yfir,,100000,1*basic_plan ,FPB       ,Should not e*ceed primaryInsured Life Rider Amounts, YRBR+YFPR+YFTR+YFIR,NA,Yugadivi
+Ceylinco_Life_Randaru_Plus_yfpr,66,Life,R,spouseInsured,yfpr,Rider 1,,,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Protection (Loss of Life)
+Ceylinco_Life_Randaru_Plus_yier,66,Life,R,spouseInsured,yier,Rider 2,yftr,,,0.5*yrbr,7*yrbr,FDB_44,0,0,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_yftr,66,Life,R,spouseInsured,yftr,Rider 3,yier,,N,1*yier,1*yier,NA,Load Default Value of YIER,,NA,
+Ceylinco_Life_Randaru_Plus_yfcr,66,Life,R,spouseInsured,yfcr,Rider 4,yier,,,100000,1*yier,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Ceylinco_Life_Randaru_Plus_yadr,66,Life,R,spouseInsured,yadr,Rider 5,ypdr::yoar,,,1*yrbr,(yrbr + yfpr)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Ceylinco_Life_Randaru_Plus_ypdr,66,Life,R,spouseInsured,ypdr,Rider 6,yadr,,,100000,0.5*yoar,CPDB,,,NA,Partial & Permanent Disability (PDB)
+Ceylinco_Life_Randaru_Plus_yoar,66,Life,R,spouseInsured,yoar,Rider 7,yadr,,,1*yrbr,10* yrbr|2*TLR< yrbr+yfpr+yftr+yfir>,TPDA      ,,,NA,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_yosr,66,Life,R,spouseInsured,yosr,Rider 8,yoar,,,1*yoar,1*yoar,TPDS      ,,,NA,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_yher,66,Life,R,spouseInsured,yher,Rider 9,,,,1000,2 %TLR< yrbr+yfpr+yftr+yfir>,HCB_N     ,,,NA,Ceylinco Life Hospital Cash Plus
+Ceylinco_Life_Randaru_Plus_ymer,66,Life,R,spouseInsured,ymer,Rider 10,,,,100000,50 %TLR< yrbr+yfpr+yftr+yfir>,CMM,0,0,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_yfir,66,Life,R,spouseInsured,yfir,Rider 11,,yrbr,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Ceylinco_Life_Randaru_Plus_yhor,66,Life,R,spouseInsured,yhor,Rider 12,,,,200000,50%TLR< yrbr+yfpr+yftr+yfir>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_child1_zier,66,Life,R,child1,zier,Rider 1,child2_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child1_zher,66,Life,R,child1,zher,Rider 2,child2_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Ceylinco_Life_Randaru_Plus_child1_zmer,66,Life,R,child1,zmer,Rider 3,child2_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_child1_zhor,66,Life,R,child1,zhor,Rider 4,child2_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_child2_zier,66,Life,R,child2,zier,Rider 1,child1_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child2_zher,66,Life,R,child2,zher,Rider 2,child1_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Ceylinco_Life_Randaru_Plus_child2_zmer,66,Life,R,child2,zmer,Rider 3,child1_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_child2_zhor,66,Life,R,child2,zhor,Rider 4,child1_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_child3_zier,66,Life,R,child3,zier,Rider 1,child1_zier::child2_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child3_zher,66,Life,R,child3,zher,Rider 2,child1_zher::child2_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Ceylinco_Life_Randaru_Plus_child3_zmer,66,Life,R,child3,zmer,Rider 3,child1_zmer::child2_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_child3_zhor,66,Life,R,child3,zhor,Rider 4,child1_zhor::child2_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_child4_zier,66,Life,R,child4,zier,Rider 1,child1_zier::child2_zier::child3_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child4_zher,66,Life,R,child4,zher,Rider 2,child1_zher::child2_zher::child3_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Ceylinco_Life_Randaru_Plus_child4_zmer,66,Life,R,child4,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_child4_zhor,66,Life,R,child4,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_child5_zier,66,Life,R,child5,zier,Rider 1,child1_zier::child2_zier::child3_zier::child4_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child5_zher,66,Life,R,child5,zher,Rider 2,child1_zher::child2_zher::child3_zher::child4_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Ceylinco_Life_Randaru_Plus_child5_zmer,66,Life,R,child5,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child4_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Ceylinco_Life_Randaru_Plus_child5_zhor,66,Life,R,child5,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child4_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Ceylinco_Life_Randaru_Plus_basic_plan_S,66,Life,S,primaryInsured,66s,primaryInsured Rider,fpus::adbs::pdbs::toas::toss,fibs,,,,BA31,,TLR = 003S+FPUS+FDTS+FIBS,SFC,
+Ceylinco_Life_Randaru_Plus_fpus,66,Life,S,primaryInsured,fpus,Rider 1,basic_plan::adbs::pdbs::toas::toss,,,9*basic_plan,9*basic_plan,FPB       ,,,SFC,Family Protection (Loss of Life)
+Ceylinco_Life_Randaru_Plus_ides,66,Life,S,primaryInsured,ides,Rider 2,fdts,,,0.5*basic_plan,7*basic_plan,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_fdts,66,Life,S,primaryInsured,fdts,Rider 3,ides,,N,1*ides,1*ides,NA,Load Default Value of IDES,,SFC,
+Ceylinco_Life_Randaru_Plus_fdcs,66,Life,S,primaryInsured,fdcs,Rider 4,,ides,,100000,1*ides,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Ceylinco_Life_Randaru_Plus_adbs,66,Life,S,primaryInsured,adbs,Rider 5,fpus::pdbs::toas::toss,,,10*basic_plan,10*basic_plan,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Ceylinco_Life_Randaru_Plus_pdbs,66,Life,S,primaryInsured,pdbs,Rider 6,fpus::adbs::toas::toss,,,10*basic_plan,10*basic_plan,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Ceylinco_Life_Randaru_Plus_toas,66,Life,S,primaryInsured,toas,Rider 7,fpus::adbs::pdbs::toss,,,10*basic_plan,10*basic_plan,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_toss,66,Life,S,primaryInsured,toss,Rider 8,fpus::adbs::pdbs::toas,,,10*basic_plan,10*basic_plan,TPDS      ,,,SFC,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_fibs,66,Life,S,primaryInsured,fibs,Rider 11,basic_plan,,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003S,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Ceylinco_Life_Randaru_Plus_yrbs,66,Life,S,spouseInsured,yrbs,primaryInsured Rider,,,,100000,1*basic_plan,FPB       ,Should not exceed primaryInsured Life Rider Amounts,TLR = YRBS+YFPS+YFTS+YFIS,SFC,
+Ceylinco_Life_Randaru_Plus_yfps,66,Life,S,spouseInsured,yfps,Rider 1,,,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Protection (Loss of Life)
+Ceylinco_Life_Randaru_Plus_yies,66,Life,S,spouseInsured,yies,Rider 2,yfts,,,0.5*yrbs,yrbs *7  ,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_yfts,66,Life,S,spouseInsured,yfts,Rider 3,yies,,N,1*yies,1*yies,NA,Load Default Value of YIES,,SFC,
+Ceylinco_Life_Randaru_Plus_yfcs,66,Life,S,spouseInsured,yfcs,Rider 4,,yies,,100000,1*yies,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Ceylinco_Life_Randaru_Plus_yads,66,Life,S,spouseInsured,yads,Rider 5,ypds::yoas,,,1*yrbs,(yrbs + yfps)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Ceylinco_Life_Randaru_Plus_ypds,66,Life,S,spouseInsured,ypds,Rider 6,yads,,,100000,0.5*yoas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Ceylinco_Life_Randaru_Plus_yoas,66,Life,S,spouseInsured,yoas,Rider 7,yads::yoss,,,1*yrbs,10* yrbs|2*TLR<yrbs+yfps+yfts+yfis>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Ceylinco_Life_Randaru_Plus_yoss,66,Life,S,spouseInsured,yoss,Rider 8,yads,,,1*yoas,1*yoas,TPDS      ,,,SFC,
+Ceylinco_Life_Randaru_Plus_yfis,66,Life,S,spouseInsured,yfis,Rider 11,,yrbs,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Ceylinco_Life_Randaru_Plus_child1_zies,66,Life,S,child1,zies,Rider 1,child2_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child2_zies,66,Life,S,child2,zies,Rider 1,child1_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child3_zies,66,Life,S,child3,zies,Rider 1,child1_zies::child2_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child4_zies,66,Life,S,child4,zies,Rider 1,child1_zies::child2_zies::child3_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Randaru_Plus_child5_zies,66,Life,S,child5,zies,Rider 1,child1_zies::child2_zies::child3_zies::child4_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Ceylinco_Life_Smart_Protection_basic_plan_R,429,Life,R,primaryInsured,429R,Rider 1,,,,300000,1.00E+13,PL429,,,NA,
+Ceylinco_Life_Protection_Plus_basic_plan_R,429,Life,R,primaryInsured,432R,Rider 1,,,,500000,1.00E+13,PL427,,,NA,
+Ceylinco_Life_Protection_Plus_basic_plan_S,429,Life,S,primaryInsured,432S,Rider 1,,,,500000,1.00E+13,PL427,,,SFC427,
+Sipsetha_basic_plan_R,13,Life,R,primaryInsured,013r,primaryInsured Rider,adbr::pdbr::toar::tosr1::tosr2::tatr::star::tanr,fibr,,,,BAS13    ,,basic_plan+fpur+fdtr+fibr,NA,
+Sipsetha_fpur,13,Life,R,primaryInsured,fpur,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,NA,
+Sipsetha_ider,13,Life,R,primaryInsured,ider,Rider 2,fdtr,fdcr,,0.5*basic_plan,7*basic_plan,FDB44       ,,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_fdtr,13,Life,R,primaryInsured,fdtr,Rider 3,ider,,N,1*ider,1*ider,NA,Load Default Value of IDER ,,NA,
+Sipsetha_fdcr,13,Life,R,primaryInsured,fdcr,Rider 4,ider,,,100000,1*ider,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Sipsetha_adbr,13,Life,R,primaryInsured,adbr,Rider 5,pdbr::toar::tosr1::tosr2::star::tanr::tatr,,,1*basic_plan,(basic_plan+fpur)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Sipsetha_pdbr,13,Life,R,primaryInsured,pdbr,Rider 6,adbr::toar::tosr1::tosr2::star::tanr::tatr,,,100000,(tosr1+tosr2)*0.5,CPDB,,,NA,Partial Permanent Disability (PDB)
+Sipsetha_toar,13,Life,R,primaryInsured,toar,Rider 7,adbr::pdar::tosr1::tosr2::star::tanr::tatr,,,0,(10*basic_plan| 2*TLR<13*basic_plan+fpur+fdtr+fibr>)-star,ATPDA      ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Total Permanent Disability Accident (Monthly Income for 10 years)
+Sipsetha_tosr1,13,Life,R,primaryInsured,tosr1,Rider 8,adbr::toar::pdbr::tosr2::star::tanr::tatr,,,1*star,(1*star)+toar,STPDS,,,NA,Total Permanent Disability Sickness (Monthly Income for 10 years)
+Sipsetha_tosr2,13,Life,R,primaryInsured,tosr2,Rider 8,adbr::toar::tosr1::pdbr::star::tanr::tatr,,,1*star,(1*star)+toar,ATPDS,,,NA,Total Permanent Disability Sickness (Monthly Income for 10 years)
+Sipsetha_hcer,13,Life,R,primaryInsured,hcer,Rider 9,,,,1000,2 %TLR<13*basic_plan+fpur+fdtr+fibr>,HCB_N     ,TLR = 003R+FPUR+FDTR+FIBR,,NA,Hospital Cash (Per day hospitalization benefit)
+Sipsetha_cmer,13,Life,R,primaryInsured,cmer,Rider 10,,,,100000,50 %TLR <13*basic_plan+fpur+fdtr+fibr>,CMM,0,,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_fibr,13,Life,R,primaryInsured,fibr,Rider 11,,basic_plan,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003R,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Sipsetha_horr,13,Life,R,primaryInsured,horr,Rider 12,,,,200000,50%TLR<13*basic_plan+fpur+fdtr+fibr>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_tanr,13,Life,R,primaryInsured,tanr,Rider 13,adbr::pdbr::toar::tosr1::tosr2::tatr::star,,N,3*basic_plan,3*basic_plan,BAS13    ,,,,
+Sipsetha_star,13,Life,R,primaryInsured,star,Rider 14,adbr::pdbr::toar::tosr1::tosr2::tanr::tatr,,,1*basic_plan,1*basic_plan,STPDA,,,,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Sipsetha_tatr,13,Life,R,primaryInsured,tatr,Rider 15,adbr::pdbr::toar::tosr1::tosr2:tanr::tatr,,N,1*basic_plan,1*basic_plan,BAS13    ,,,,
+Sipsetha_yrbr,13,Life,R,spouseInsured,yrbr,primaryInsured Rider,,yfir,,100000,1*basic_plan ,FPB       ,Should not e*ceed primaryInsured Life Rider Amounts, YRBR+YFPR+YFTR+YFIR,NA,Yugadivi
+Sipsetha_yfpr,13,Life,R,spouseInsured,yfpr,Rider 1,,,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Protection (Loss of Life)
+Sipsetha_yier,13,Life,R,spouseInsured,yier,Rider 2,yftr,,,0.5*yrbr,7*yrbr,FDB       ,0,0,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_yftr,13,Life,R,spouseInsured,yftr,Rider 3,yier,,N,1*yier,1*yier,NA,Load Default Value of YIER,,NA,
+Sipsetha_yfcr,13,Life,R,spouseInsured,yfcr,Rider 4,yier,,,100000,1*yier,CCCR      ,,,NA,Extra Cover for Cancer (At diagnosis of Cancer)
+Sipsetha_yadr,13,Life,R,spouseInsured,yadr,Rider 5,ypdr::yoar,,,1*yrbr,(yrbr + yfpr)*2,ADB       ,,,NA,Accidental Death (Additional Amount on Accidental Death)
+Sipsetha_ypdr,13,Life,R,spouseInsured,ypdr,Rider 6,yadr,,,100000,0.5*yoar,CPDB,,,NA,Partial & Permanent Disability (PDB)
+Sipsetha_yoar,13,Life,R,spouseInsured,yoar,Rider 7,yadr,,,1*yrbr,10* yrbr|2*TLR< yrbr+yfpr+yftr+yfir>,TPDA      ,,,NA,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Sipsetha_yosr,13,Life,R,spouseInsured,yosr,Rider 8,yoar,,,1*yoar,1*yoar,TPDS      ,,,NA,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Sipsetha_yher,13,Life,R,spouseInsured,yher,Rider 9,,,,1000,2 %TLR< yrbr+yfpr+yftr+yfir>,HCB_N     ,,,NA,Ceylinco Life Hospital Cash Plus
+Sipsetha_ymer,13,Life,R,spouseInsured,ymer,Rider 10,,,,100000,50 %TLR< yrbr+yfpr+yftr+yfir>,CMM,0,0,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_yfir,13,Life,R,spouseInsured,yfir,Rider 11,,yrbr,,1*yrbr,6*yrbr,FIB,Should be multiple of YRBR,,NA,Family Income Benefit (An Yearly Income for 10 Years)
+Sipsetha_yhor,13,Life,R,spouseInsured,yhor,Rider 12,,,,200000,50%TLR< yrbr+yfpr+yftr+yfir>,HSB,Refer Plan & Term Matri*,,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_child1_zier,13,Life,R,child1,zier,Rider 1,child2_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child1_zher,13,Life,R,child1,zher,Rider 2,child2_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Sipsetha_child1_zmer,13,Life,R,child1,zmer,Rider 3,child2_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_child1_zhor,13,Life,R,child1,zhor,Rider 4,child2_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_child2_zier,13,Life,R,child2,zier,Rider 1,child1_zier::child3_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child2_zher,13,Life,R,child2,zher,Rider 2,child1_zher::child3_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Sipsetha_child2_zmer,13,Life,R,child2,zmer,Rider 3,child1_zmer::child3_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_child2_zhor,13,Life,R,child2,zhor,Rider 4,child1_zhor::child3_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_child3_zier,13,Life,R,child3,zier,Rider 1,child1_zier::child2_zier::child4_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child3_zher,13,Life,R,child3,zher,Rider 2,child1_zher::child2_zher::child4_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Sipsetha_child3_zmer,13,Life,R,child3,zmer,Rider 3,child1_zmer::child2_zmer::child4_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_child3_zhor,13,Life,R,child3,zhor,Rider 4,child1_zhor::child2_zhor::child4_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_child4_zier,13,Life,R,child4,zier,Rider 1,child1_zier::child2_zier::child3_zier::child5_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child4_zher,13,Life,R,child4,zher,Rider 2,child1_zher::child2_zher::child3_zher::child5_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Sipsetha_child4_zmer,13,Life,R,child4,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child5_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_child4_zhor,13,Life,R,child4,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child5_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_child5_zier,13,Life,R,child5,zier,Rider 1,child1_zier::child2_zier::child3_zier::child4_zier,,,300000,1*ider|yier,FDBC      ,Multiple Child ZIER benefit should be Equal,,NA,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child5_zher,13,Life,R,child5,zher,Rider 2,child1_zher::child2_zher::child3_zher::child4_zher,,,1000,1*hcer|yher,HCB_N     ,Multiple Child ZHER benefit should be Equal,,NA,Ceylinco Life Hospital Cash Plus
+Sipsetha_child5_zmer,13,Life,R,child5,zmer,Rider 3,child1_zmer::child2_zmer::child3_zmer::child4_zmer,,,100000,1*cmer|ymer,CMM,Multiple Child ZMER benefit should be Equal,,NA,Major Surgery (526 list of Surgeries)
+Sipsetha_child5_zhor,13,Life,R,child5,zhor,Rider 4,child1_zhor::child2_zhor::child3_zhor::child4_zhor,,,200000,1*horr|yhor,HSB ( code changes to sum ass ) ,Sum Assured Packages, Multiple Child ZHOR benefit should be Equal,NA,Health Support Plus (Hospital Bill reimbursement)
+Sipsetha_basic_plan_S,13,Life,S,primaryInsured,013s,primaryInsured Rider,adbs::pdbs::toas::toss1::toss2::tats::stas::tans,fibs,,,,BAS13    ,,TLR = 003S+FPUS+FDTS+FIBS,SFC,
+Sipsetha_fpus,13,Life,S,primaryInsured,fpus,Rider 1,,,,1*basic_plan,6*basic_plan,FPB       ,,,SFC,Family Protection (Loss of Life)
+Sipsetha_ides,13,Life,S,primaryInsured,ides,Rider 2,fdts,,,0.5*basic_plan,7*basic_plan,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_fdts,13,Life,S,primaryInsured,fdts,Rider 3,ides,,N,1*ides,1*ides,NA,Load Default Value of IDES,,SFC,
+Sipsetha_fdcs,13,Life,S,primaryInsured,fdcs,Rider 4,,ides,,100000,1*ides,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Sipsetha_adbs,13,Life,S,primaryInsured,adbs,Rider 5,pdbs::toas,,,1*basic_plan,(basic_plan + fpus)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Sipsetha_pdbs,13,Life,S,primaryInsured,pdbs,Rider 6,adbs,,,100000,0.5*toas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Sipsetha_toas,13,Life,S,primaryInsured,toas,Rider 7,adbs::toss,,,1*basic_plan,10* basic_plan|2*TLR<basic_plan+fpus_fdts+fibs>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Sipsetha_toss,13,Life,S,primaryInsured,toss,Rider 8,toas,,,1*toas,1*toas,TPDS      ,,,SFC,Total & Permanent Disability - Sickness (Monthly Income for 10 years)
+Sipsetha_fibs,13,Life,S,primaryInsured,fibs,Rider 11,,003S -O,,1*basic_plan,6*basic_plan,FIB,Should be multiple of 003S,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Sipsetha_yrbs,13,Life,S,spouseInsured,yrbs,primaryInsured Rider,,,,100000,1*basic_plan,FPB       ,Should not exceed primaryInsured Life Rider Amounts,TLR = YRBS+YFPS+YFTS+YFIS,SFC,
+Sipsetha_yfps,13,Life,S,spouseInsured,yfps,Rider 1,,,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Protection (Loss of Life)
+Sipsetha_yies,13,Life,S,spouseInsured,yies,Rider 2,yfts,,,0.5*yrbs,yrbs *7  ,FDB       ,0,0,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_yfts,13,Life,S,spouseInsured,yfts,Rider 3,yies,,N,1*yies,1*yies,NA,Load Default Value of YIES,,SFC,
+Sipsetha_yfcs,13,Life,S,spouseInsured,yfcs,Rider 4,,yies,,100000,1*yies,CCCR      ,,,SFC,Extra Cover for Cancer (At diagnosis of Cancer)
+Sipsetha_yads,13,Life,S,spouseInsured,yads,Rider 5,ypds::yoas,,,1*yrbs,(yrbs + yfps)*2,ADB       ,,,SFC,Accidental Death (Additional Amount on Accidental Death)
+Sipsetha_ypds,13,Life,S,spouseInsured,ypds,Rider 6,yads,,,100000,0.5*yoas ,CPDB,,,SFC,Partial & Permanent Disability (PDB)
+Sipsetha_yoas,13,Life,S,spouseInsured,yoas,Rider 7,yads::yoss,,,1*yrbs,10* yrbs|2*TLR<yrbs+yfps+yfts+yfis>,TPDA      ,,,SFC,Total & Permanent Disability - Accident (Monthly Income for 10 years)
+Sipsetha_yoss,13,Life,S,spouseInsured,yoss,Rider 8,yads,,,1*yoas,1*yoas,TPDS      ,,,SFC,
+Sipsetha_yfis,13,Life,S,spouseInsured,yfis,Rider 11,,yrbs,,1*yrbs,6*yrbs,FIB,Should be multiple of YRBS,,SFC,Family Income Benefit (An Yearly Income for 10 Years)
+Sipsetha_child1_zies,13,Life,S,child1,zies,Rider 1,child2_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child2_zies,13,Life,S,child2,zies,Rider 1,child1_zies::child3_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child3_zies,13,Life,S,child3,zies,Rider 1,child1_zies::child2_zies::child4_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child4_zies,13,Life,S,child4,zies,Rider 1,child1_zies::child2_zies::child3_zies::child5_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)
+Sipsetha_child5_zies,13,Life,S,child5,zies,Rider 1,child1_zies::child2_zies::child3_zies::child4_zies,,,200000,1*ides|yies,FDBC      ,Multiple Child ZIES benefit should be Equal,,SFC,Family Digasiri Plus (36 Critical Illnesses)

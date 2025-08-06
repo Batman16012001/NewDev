@@ -1,0 +1,358 @@
+{
+  "coverages": [
+    "product.proposedInsured.coverages.basic_plan.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.basic_plan.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YrbrSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YrbrSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.ContributionOPSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.ContributionOPSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.ContributionOPSpouseSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.ContributionOPSpouseSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.LifeCoverOPSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.LifeCoverOPSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.LifeCoverOPSpouseSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.LifeCoverOPSpouseSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.FpurSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.FpurSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YfprSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YfprSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.FibrSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.FibrSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YfirSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YfirSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.IderSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.IderSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YierSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YierSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.FdcrSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.FdcrSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YfcrSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YfcrSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.HcerSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.HcerSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YherSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YherSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.CmerSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.CmerSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YmerSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YmerSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.AdbrSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.AdbrSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YadrSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YadrSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.PdbrSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.PdbrSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.YpdrSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.YpdrSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.JMIBSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.JMIBSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.JMIBSlifeSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.JMIBSlifeSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.IFSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.IFSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.IFSlifeSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.IFSlifeSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.IndividualHorrSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.IndividualHorrSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.IndividualYhorSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.IndividualYhorSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.FamilyHorrSA.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.FamilyHorrSA.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.FamilyYhorSA.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.FamilyYhorSA.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.deductibleAmt.benefitPeriod.applicationValue",
+    "product.proposedInsured.coverages.deductibleAmt.benefitAmount.applicationValue",
+    "product.spouseInsured.coverages.SAdeductibleAmt.benefitPeriod.applicationValue",
+    "product.spouseInsured.coverages.SAdeductibleAmt.benefitAmount.applicationValue",
+    "product.childOne.coverages.Zier_SA.benefitAmount.applicationValue",
+    "product.childOne.coverages.Zher_SA.benefitAmount.applicationValue",
+    "product.childOne.coverages.Zhor_SA.benefitAmount.applicationValue",
+    "product.childOne.coverages.Zmer_SA.benefitAmount.applicationValue",
+    "product.childOne.coverages.deductibleamt.benefitAmount.applicationValue",
+    "product.childTwo.coverages.Zier_SA.benefitAmount.applicationValue",
+    "product.childTwo.coverages.Zher_SA.benefitAmount.applicationValue",
+    "product.childTwo.coverages.Zhor_SA.benefitAmount.applicationValue",
+    "product.childTwo.coverages.Zmer_SA.benefitAmount.applicationValue",
+    "product.childTwo.coverages.deductibleamt.benefitAmount.applicationValue",
+    "product.childThree.coverages.Zier_SA.benefitAmount.applicationValue",
+    "product.childThree.coverages.Zher_SA.benefitAmount.applicationValue",
+    "product.childThree.coverages.Zhor_SA.benefitAmount.applicationValue",
+    "product.childThree.coverages.Zmer_SA.benefitAmount.applicationValue",
+    "product.childThree.coverages.deductibleamt.benefitAmount.applicationValue",
+    "product.childFour.coverages.Zier_SA.benefitAmount.applicationValue",
+    "product.childFour.coverages.Zher_SA.benefitAmount.applicationValue",
+    "product.childFour.coverages.Zhor_SA.benefitAmount.applicationValue",
+    "product.childFour.coverages.Zmer_SA.benefitAmount.applicationValue",
+    "product.childFour.coverages.deductibleamt.benefitAmount.applicationValue",
+    "product.childFive.coverages.Zier_SA.benefitAmount.applicationValue",
+    "product.childFive.coverages.Zher_SA.benefitAmount.applicationValue",
+    "product.childFive.coverages.Zhor_SA.benefitAmount.applicationValue",
+    "product.childFive.coverages.Zmer_SA.benefitAmount.applicationValue",
+    "product.childFive.coverages.deductibleamt.benefitAmount.applicationValue",
+    "product.proposedInsured.coverages.rider_contribution",
+    "product.proposedInsured.coverages.basic_term",
+    "product.spouseInsured.coverages.rider_contribution_slife",
+    "product.spouseInsured.coverages.Yrbr_Policy_Term"
+  ],
+  "optionalData": [
+    "||al_address_details.mlife.corr.home_number||",
+    "||product.productDetails.premiumPaymentTerm||",
+    "||product.proposedInsured.corr.homeNumber||",
+    "||product.spouseInsured.corr.homeNumber||",
+    "||payment.relative.name.firstName||",
+    "||payment.relative.address.phone.contactNo||"
+  ],
+  "spouseInsureddata": [
+    "||product.spouseInsured.person.name.title||",
+    "||product.spouseInsured.person.name.firstName||",
+    "||product.spouseInsured.person.name.lastName||",
+    "||product.spouseInsured.person.name.nameInitials||",
+    "||product.spouseInsured.address.corrLine1||",
+    "||product.spouseInsured.address.corrLine2||",
+    "||product.spouseInsured.address.corrLine3||",
+    "||product.spouseInsured.address.postalCode||",
+    "||product.spouseInsured.address.postalPin||",
+    "||product.spouseInsured.address.district||",
+    "||product.spouseInsured.address.country||",
+    "||product.spouseInsured.phone.mobileNumber||",
+    "||product.spouseInsured.person.emailAddress||",
+    "||product.spouseInsured.address.permnentCity||",
+    "||product.spouseInsured.address.permnentDistrict||",
+    "||product.spouseInsured.person.adharCardNumber||",
+    "||product.spouseInsured.person.dob||",
+    "||product.spouseInsured.person.age||",
+    "||product.spouseInsured.employment.occupation||",
+    "||product.spouseInsured.employment.natureOfBusiness||",
+    "||product.spouseInsured.employment.otherSourceOfIncome||",
+    "||product.spouseInsured.employment.employerName||",
+    "||product.spouseInsured.employment.periodOfEmployment||",
+    "||product.spouseInsured.employment.annualIncome||",
+    "||product.spouseInsured.employment.businessRegNo||",
+    "||product.spouseInsured.person.height.centimeter||",
+    "||product.spouseInsured.person.weightInkg||"
+  ],
+  "TableCreateJSON": [
+    "product.proposedInsured.familyDetails.familyInformation",
+    "product.proposedInsured.familyDetails.health",
+    "product.proposedInsured.previousPolicy",
+    "product.proposedInsured.previousPolicy.declined",
+    "product.proposedInsured.beneficiaries",
+    "product.spouseInsured.beneficiaries"
+  ],
+  "TableJSONKey": {
+    "product.proposedInsured.familyDetails.familyInformation": [
+      "age",
+      "stateofhealth",
+      "causeofdeath"
+    ],
+    "product.spouseInsured.familyDetails.familyInformation": [
+      "age",
+      "stateofhealth",
+      "causeofdeath"
+    ],
+    "product.proposedInsured.familyDetails.health": [
+      "disease"
+    ],
+    "product.spouseInsured.familyDetails.health": [
+      "disease"
+    ],
+    "product.proposedInsured.previousPolicy": [
+      "nameofinsurance",
+      "policyno",
+      "policyvalue",
+      "premium"
+    ],
+    "product.spouseInsured.previousPolicy": [
+      "nameofinsurance",
+      "policyno",
+      "policyvalue",
+      "premium"
+    ],
+    "product.proposedInsured.previousPolicy.declined": [
+      "answer",
+      "reason"
+    ],
+    "product.spouseInsured.previousPolicy.declined": [
+      "answer",
+      "reason"
+    ],
+    "product.proposedInsured.beneficiaries": [
+      "name",
+      "relationship",
+      "dob",
+      "adharCardNumber",
+      "deathBenifit",
+      "familyDigasiri",
+      "familyIncome"
+    ],
+    "product.spouseInsured.beneficiaries": [
+      "name",
+      "relationship",
+      "dob",
+      "adharCardNumber",
+      "deathBenifit",
+      "familyDigasiri",
+      "familyIncome"
+    ]
+  },
+  "TableJSONKeyOther": {
+    "product.proposedInsured.familyDetails.familyInformation": [
+      "spouseInsured"
+    ],
+    "product.proposedInsured.familyDetails.health": [
+      "spouseInsured"
+    ],
+    "product.proposedInsured.previousPolicy": [
+      "spouseInsured"
+    ],
+    "product.proposedInsured.previousPolicy.declined": [
+      "spouseInsured"
+    ]
+  },
+  "InnerTableCreation": [
+    "details",
+    "declined"
+  ],
+  "AllLife_Coverages": [
+    "product.proposedInsured.coverages",
+    "product.spouseInsured.coverages",
+    "product.childOne.coverages",
+    "product.childTwo.coverages",
+    "product.childThree.coverages",
+    "product.childFour.coverages",
+    "product.childFive.coverages"
+  ],
+  "InterviewUIFormat": [
+    "Same"
+  ],
+  "InterviewTableCreateJSONMain": {
+    "product.proposedInsured.individualInterview": [
+      "text"
+    ],
+    "product.childOne.individualInterview": [
+      "text"
+    ],
+    "product.childTwo.individualInterview": [
+      "text"
+    ],
+    "product.childThree.individualInterview": [
+      "text"
+    ],
+    "product.childFour.individualInterview": [
+      "text"
+    ],
+    "product.childFive.individualInterview": [
+      "text"
+    ]
+  },
+  "InterviewTableJSONKey": {
+    "product.proposedInsured.individualInterview.HEALTH": [
+      "answer",
+      "answerDetail"
+    ],
+    "product.proposedInsured.individualInterview.GENERAL": [
+      "answer",
+      "answerDetail"
+    ],
+    "product.proposedInsured.individualInterview.COVID": [
+      "answer"
+    ],
+    "product.spouseInsured.individualInterview.HEALTH": [
+      "answer",
+      "answerDetail"
+    ],
+    "product.spouseInsured.individualInterview.GENERAL": [
+      "answer",
+      "answerDetail"
+    ],
+    "product.spouseInsured.individualInterview.COVID": [
+      "answer"
+    ],
+    "product.childOne.individualInterview.HEALTH": [
+      "answer"
+    ],
+    "product.childOne.individualInterview.GENERAL": [
+      "answer"
+    ],
+    "product.childOne.individualInterview.COVID": [
+      "answer"
+    ],
+    "product.childTwo.individualInterview.HEALTH": [
+      "answer"
+    ],
+    "product.childTwo.individualInterview.GENERAL": [
+      "answer"
+    ],
+    "product.childTwo.individualInterview.COVID": [
+      "answer"
+    ],
+    "product.childThree.individualInterview.HEALTH": [
+      "answer"
+    ],
+    "product.childThree.individualInterview.GENERAL": [
+      "answer"
+    ],
+    "product.childThree.individualInterview.COVID": [
+      "answer"
+    ],
+    "product.childFour.individualInterview.HEALTH": [
+      "answer"
+    ],
+    "product.childFour.individualInterview.GENERAL": [
+      "answer"
+    ],
+    "product.childFour.individualInterview.COVID": [
+      "answer"
+    ],
+    "product.childFive.individualInterview.HEALTH": [
+      "answer"
+    ],
+    "product.childFive.individualInterview.GENERAL": [
+      "answer"
+    ],
+    "product.childFive.individualInterview.COVID": [
+      "answer"
+    ]
+  },
+  "InterviewTableJSONKeyOther": {
+    "product.proposedInsured.individualInterview": [
+      "spouseInsured"
+    ],
+    "product.childOne.individualInterview": [],
+    "product.childTwo.individualInterview": [],
+    "product.childThree.individualInterview": [],
+    "product.childFour.individualInterview": [],
+    "product.childFive.individualInterview": []
+  },
+  "InterviewFormat": [
+    "product.proposedInsured.individualInterview",
+    "product.childOne.individualInterview",
+    "product.childTwo.individualInterview",
+    "product.childThree.individualInterview",
+    "product.childFour.individualInterview",
+    "product.childFive.individualInterview"
+  ],
+  "Interview": [
+    "product.proposedInsured.individualInterview",
+    "product.spouseInsured.individualInterview",
+    "product.childOne.individualInterview",
+    "product.childTwo.individualInterview",
+    "product.childThree.individualInterview",
+    "product.childFour.individualInterview",
+    "product.childFive.individualInterview"
+  ],
+  "TableInStucturedFormat": [],
+  "InteviewCategory": [
+    "HEALTH",
+    "GENERAL",
+    "COVID"
+  ],
+  "DivShowHide": [
+    "slifeBene",
+    "product.childOne",
+    "product.childTwo",
+    "product.childThree",
+    "product.childFour",
+    "product.childFive"
+  ]
+}

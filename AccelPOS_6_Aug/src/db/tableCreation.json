@@ -1,0 +1,108 @@
+{
+  "tables": [
+    {
+      "table_name": "al_application_main",
+      "primary_key": "e_referenceId"
+    },
+    {
+      "table_name": "al_client_details",
+      "primary_key": "client_id"
+    },
+    {
+      "table_name": "al_address_detail",
+      "primary_key": "address_id"
+    },
+    {
+      "table_name": "al_person_details",
+      "primary_key": "person_id"
+    },
+    {
+      "table_name": "al_employment_details",
+      "primary_key": "employment_id"
+    },
+    {
+      "table_name": "al_verification_details",
+      "primary_key": "verification_id"
+    },
+    {
+      "table_name": "al_sqs_details",
+      "primary_key": "sqs_id"
+    },
+    {
+      "table_name": "al_rider_details",
+      "primary_key": "rider_id"
+    },
+    {
+      "table_name": "al_payor_details",
+      "primary_key": "payor_id"
+    },
+    {
+      "table_name": "al_agent_details",
+      "primary_key": "id"
+    },
+    {
+      "table_name": "al_beneficiary_details",
+      "primary_key": "beneficiaryID"
+    },
+    {
+      "table_name": "al_previous_insu_details",
+      "primary_key": "prev_insu_id"
+    },
+    {
+      "table_name": "al_consent_and_decl_details",
+      "primary_key": "consent_id"
+    },
+    {
+      "table_name": "al_family_details",
+      "primary_key": "family_info_id"
+    },
+    {
+      "table_name": "al_document_details",
+      "primary_key": "documentId"
+    },
+    {
+      "table_name": "al_acr_details",
+      "primary_key": "acr_id"
+    },
+    {
+      "table_name": "al_general_question",
+      "primary_key": "general_question_id"
+    },
+    {
+      "table_name": "al_fna_persons",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_goals",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_income_expenses",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_saving_provision",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_assests_liabilities",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_coverages",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_risk_profile",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_calculator",
+      "primary_key": "fna_id"
+    },
+    {
+      "table_name": "al_fna_signatures",
+      "primary_key": "fna_id"
+    }
+  ]
+}

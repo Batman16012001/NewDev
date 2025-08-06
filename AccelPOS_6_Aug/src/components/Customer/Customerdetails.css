@@ -1,0 +1,180 @@
+.customer-details-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-details-form .form-label {
+  font-weight: bold;
+}
+
+.customer-details-form .form-control, 
+.customer-details-form .form-select {
+  margin-bottom: 15px;
+}
+
+.customer-details-form .btn {
+  min-width: 120px;
+}
+
+/* Fixed Save Button */
+.fixed-save-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Background color to ensure it stands out */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-save {
+  background-color: #CA001D;
+  color: #fff;
+  border-radius: 7px;
+  width: 20%;
+  text-align: center;
+}
+
+.customer-navbar {
+  align-items: center;
+  height: 116px;
+  box-shadow: 0 4px 6px #0000001a;
+  position: fixed;
+  top: 4px;
+  left: 225px;
+  z-index: 1000;
+  width: 76%;
+  flex-shrink: 0;
+}
+
+.customer-container {
+  /* padding-top: 40px; */
+    font-size: 15px;
+    height: calc(100vh - 130px); /* Adjust according to the height of the navbar */
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.customerform {
+  flex-grow: 1; /* Takes up all remaining space between navbar and save button */
+  overflow-y: auto; /* Makes the form scrollable */
+  padding: 0 20px; /* Optional padding for better UI */
+}
+
+
+.customer-form {
+  overflow-y: auto; /* Enable vertical scrolling */
+  flex-grow: 1; /* Take available space between navbar and button */
+  padding: 1rem; /* Add some padding around the form */
+}
+
+.btnsave {
+  background-color: #ca001d;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  width: 10%;
+}
+
+.fixedsavebutton {
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: end;
+  left: -80px;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .customer-navbar {
+    align-items: center;
+    box-shadow: 0 4px 6px #0000001a;
+    flex-shrink: 0;
+    height: 105px;
+    left: 5px;
+    position: fixed;
+    top: -14px;
+    width: 97%;
+    z-index: 1000;
+  }
+
+  .customer-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    /* height: calc(100vh - 55px); */
+    overflow-y: auto;
+    /* padding-top: 55px; */
+    width: 99%;
+}
+
+
+.red-text {
+  color: #ca001d;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.notification-icon {
+  transition: transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.notification-icon:hover {
+  transform: scale(1.1);
+}
+
+.profile-photo {
+  transition: box-shadow 0.2s ease;
+}
+
+.profile-photo:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fixedsavebutton {
+  background-color: #fff;
+  bottom: 0px;
+  display: flex;
+  justify-content: end;
+  left: 0px;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.btnsave {
+  background-color: #ca001d;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  width: 40%;
+}
+
+  }
+
+
+  .ios-safearea .iosfixednextprevbutton{
+    margin-top: 51px;
+  }
+
+  .ios-safearea .fixednextprevbutton{
+    bottom: 41px;
+  }
+
+  .ios-safearea .customer-container{
+    height: calc(100vh - 150px);
+  }
+
+  .ios-safearea .input[type="date"] {
+    height: 2.25rem;
+    width: 297px;
+  }
